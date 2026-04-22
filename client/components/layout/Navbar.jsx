@@ -12,7 +12,7 @@ export default function Navbar() {
               
                 {/* Logo Section */}
                 <Link href='/' className='flex items-center'>
-                <Image src='https://drive.google.com/uc?export=download&id=1uFRGinEPaBLDVBsiy6uC17aFmYJj3Hy5'
+                <Image src='/assets/navLogo-blue.svg'
                  alt='The RoyalLogo'
                  width={160}
                  height={40}
@@ -44,17 +44,39 @@ export default function Navbar() {
                         </button>
                         {/* Dropdown Menu */}
                         {isOpen && (
-                            <div>
-                                <Link href="/clothe A BoyChild Initiative (CABI)" className='block px-4
-                                py-2 hover:bg-blue-50 text-sm'>
-                                Clothe A BoyChild
-                                </Link>
+                        <div className='absolute top-full left-0 mt-4 w-[320px] bg-white 
+                        border border-gray-100 shadow-2xl rounded-2xl p-6 z-50'>
 
-                                <Link href="/Urgent 2k Campaign" className='block px-4
+                            <div className='space-y-3'>
+                                <h4 className='text-5xl font-bold text-gray-400 uppercase tracking-[0.1em] '>
+                                    Community Support & Empowerment
+                                </h4>
+                                <Link href="/initiatives/cabi" className='block px-1
+                                py-2 hover:bg-blue-50 text-sm'>
+                                Clothe A BoyChild Initiative (CABI)
+                                </Link>
+                            </div>
+                            <div className='space-y-3'>
+                                <h4 className='text-[9px] font-bold text-gray-400 uppercase tracking-[0.1em] '>
+                                    Education
+                                </h4>
+                                <Link href="/initiatives/urgent-2k" className='block px-1
                                 py-2 hover:bg-blue-50 text-sm'>
                                 Urgent 2k Campaign
                                 </Link>
                             </div>
+                            <div className='space-y-3'>
+                                <h4 className='text-[9px] font-bold text-gray-400 uppercase tracking-[0.1em] '>
+                                    Leadership Pathway
+                                </h4>
+                                <div className='inline-block px-2.5 py-0.5 bg-gray-50 border border-gray-100 rounded-md'>
+                                    <span className='text-[12px] font-bold text-gray-300 uppercase tracking-tight'>
+                                        Coming Soon
+                                    </span>
+                                
+                                </div>
+                            </div>
+                        </div>
                         )}
                         </li>
 
@@ -74,7 +96,7 @@ export default function Navbar() {
             
 
                 <button className='flex items-center justify-between
-                 bg-blue-700 h-[55px] w-[206px] pl-6 pr-2 rounded-full '>
+                 bg-blue-400 h-[55px] w-[206px] pl-6 pr-2 rounded-full '>
                     <p className='text-white text-sm font-medium'>Get Involved</p>
                     <span className='flex items-center justify-center
                      w-10 h-10 bg-blue-950 rounded-full text-white'>

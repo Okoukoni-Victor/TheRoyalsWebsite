@@ -6,6 +6,7 @@ import WorkSection from "../components/landingPage/work/WorkSection";
 import StatsSection from "../components/landingPage/stats/StatsSection";
 import PartnersSection from "../components/landingPage/partners/PartnersSection";
 import NewsletterSection from "../components/landingPage/newsletter/NewsletterSection";
+import Footer from "../components/layout/Footer";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <StatsSection />
       <PartnersSection />
       <NewsletterSection />
+      <Footer/>
     </main>
   );
 }
