@@ -1,6 +1,8 @@
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "@/components/ui/Navbar";
+import Footer from "@/components/ui/Footer";
 
 const helixa = localFont({
   src: [
@@ -38,7 +40,10 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${helixa.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Navbar />
+        {children}</body>
+        <Footer />
     </html>
   );
 }

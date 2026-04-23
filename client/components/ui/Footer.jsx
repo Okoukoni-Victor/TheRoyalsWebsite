@@ -1,7 +1,8 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaLinkedin, FaTwitter, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt, FaYoutube } from "react-icons/fa";
+import { FaLinkedin, FaWhatsapp, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 export default function Footer() {
     const currentYear = new Date().getFullYear();
     
@@ -24,9 +25,9 @@ export default function Footer() {
                  height={48}
                 className='object-contain brightness-0 invert'
                 />
-                <p className='text-gray-400 text-sm leading-relaxed max-w-[300px]'>
-                    Empowering Communities through <br /> education, mentoring,
-                    and sustainable <br />development initiatives
+                <p className='text-gray-400 text-sm leading-relaxed max-w-[280px]'>
+                    Empowering Communities through  education, mentoring,
+                    and sustainable development initiatives
                 </p>
 
                  </div>
@@ -61,13 +62,14 @@ export default function Footer() {
                         Get Intouch.
                     </h3>
                     <ul>
-                        <li className='flex items-center gap-3 text-gray-400'><FaEnvelope className='text-blue-500' /><span>hellothe royals@gmail.com</span></li>
-                        <li className='flex items-center gap-3 text-gray-400'><FaPhone className='text-blue-500' /><span className='text-sm'>+2347010990908</span></li>
-                        <li className='flex items-center gap-3 text-gray-400'><FaMapMarkerAlt className='text-blue-500 mb-5' /><span className='text-sm'>19, Olanrewaju Street, Off <br />
+                        <li className='flex items-center gap-4 mt-1 text-gray-400'><FaEnvelope className='text-white' /><span>hellothe royals@gmail.com</span></li>
+                        <li className='flex items-center gap-3 mt-1 text-gray-400'><FaPhone className='text-white' /><span className='text-sm'>+2347010990908</span></li>
+                        <li className='flex items-center gap-3 mt-1 text-gray-400'><FaWhatsapp className='text-white' /><span className='text-sm'>+2348166527163</span></li>
+                        <li className='flex items-center gap-3 mt-1 text-gray-400'><FaMapMarkerAlt className='text-white mb-5' /><span className='text-sm'>19, Olanrewaju Street, Off <br />
                             Orile Road, Tabon-Tabon, <br /> Agege, Lagos, Nigeria</span></li>
                     </ul>
                     {/* Horizontal Icons */}
-                    <div className='flex flex-row mt-5 gap-3.5'>
+                    <div className='flex flex-row justify-start mt-5 gap-3.5'>
                         <a href="#" className="hover:text-blue-500 transition">
                         <FaYoutube size={20} /> 
                         </a>
@@ -75,7 +77,7 @@ export default function Footer() {
                         <FaLinkedin size={20} /> 
                         </a>
                         <a href="#" className="hover:text-blue-500 transition">
-                        <FaTwitter size={20} /> 
+                        <FaXTwitter size={20} /> 
                         </a>
                         <a href="#" className="hover:text-blue-500 transition">
                         <FaInstagram size={20} /> 
@@ -85,7 +87,7 @@ export default function Footer() {
                 
             </div>
                 {/* Copy rights */}
-                <div className='border-t border-gray-800 flex flex-col items-center gap-6'>
+                <div className='flex flex-col items-center gap-6'>
                 <p className='text-gray-500 text-sm'>@ {currentYear} The Royals. All rights reserved</p>
                 {/* Colorful shapes at the footer bottom  */}
 
