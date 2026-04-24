@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import Button from "../../ui/Button";
 import Image from "next/image";
 
 export default function ImpactCard({ 
@@ -30,12 +30,11 @@ export default function ImpactCard({
           {description}
         </p>
 
-        <button className="inline-flex items-center gap-4 bg-white hover:bg-grey-50 text-grey-900 rounded-full pl-6 pr-2 py-2 transition-all duration-300 group">
-          <span className="font-medium text-base">Learn More</span>
-          <div className="bg-grey-900 rounded-full p-3 group-hover:scale-110 transition-transform">
-            <ArrowRight className="w-4 h-4 text-white" />
-          </div>
-        </button>
+        <Button 
+          label="Learn More" 
+          variant="secondary"
+          className="text-base"
+        />
       </div>
 
       {/* Background Graphic Pattern */}
