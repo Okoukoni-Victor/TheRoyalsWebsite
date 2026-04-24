@@ -140,13 +140,13 @@ export default function Navbar() {
             />
           </div>
 
-          <Button 
-            label={isMobileMenuOpen ? "Close" : "Menu"}
-            icon={isMobileMenuOpen ? "lucide:x" : "lucide:menu"}
+          <button 
+            className="flex lg:hidden relative z-[160] p-2 text-grey-900 focus:outline-none"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            variant="secondary"
-            className="flex lg:hidden relative z-160"
-          />
+            aria-label="Toggle menu"
+          >
+            <Icon icon={isMobileMenuOpen ? "lucide:x" : "lucide:menu"} width="28" />
+          </button>
         </div>
       </nav>
 
