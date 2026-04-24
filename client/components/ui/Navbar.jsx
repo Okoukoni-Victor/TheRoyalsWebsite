@@ -199,7 +199,7 @@ export default function Navbar() {
         {/* Footer Section */}
         <div className='px-6 mt-auto pt-10 pb-12 border-t border-grey-50 space-y-8 mobile-nav-item'>
           <Link 
-            href="/policy" 
+            href="/privacy-policy" 
             className="block text-lg font-medium text-grey-800"
             onClick={() => setIsMobileMenuOpen(false)}
           >
