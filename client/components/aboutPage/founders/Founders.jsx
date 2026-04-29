@@ -119,7 +119,7 @@ export default function Founders() {
                 </div>
               </div>
 
-              <p className="max-w-xl">{founder.bio}</p>
+              <div className="max-w-xl">{founder.bio}</div>
             </div>
           ))}
         </div>

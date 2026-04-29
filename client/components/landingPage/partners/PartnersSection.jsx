@@ -7,6 +7,7 @@ export default function PartnersSection() {
     { name: "CABI", logo: "/assets/logo-cabi.png", bgColor: "bg-purple-900" },
     { name: "NYSC", logo: "/assets/logo-nysc.png", bgColor: "bg-white" },
     { name: "Salt of the Nation", logo: "/assets/logo-ebonyi.png", bgColor: "bg-white" },
+    { name: "LUX O'BEI", logo: "/assets/logo-lux.png", bgColor: "bg-white" },
   ];
 
   return (
@@ -19,11 +20,11 @@ export default function PartnersSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="flex flex-wrap justify-center gap-6 mb-16">
           {partners.map((partner, index) => (
             <div 
               key={index} 
-              className="flex items-center p-4 justify-center rounded-2xl border border-grey-50 h-40 shadow-sm"
+              className="flex items-center p-4 justify-center rounded-2xl border border-grey-50 h-40 shadow-sm w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]"
             >
               <div className={`relative w-full h-full flex items-center justify-center rounded-xl overflow-hidden ${partner.bgColor === "bg-white" ? "" : partner.bgColor}`}>
                 <Image 
