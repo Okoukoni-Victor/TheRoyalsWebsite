@@ -1,7 +1,9 @@
 import Image from "next/image";
 import WorkCard from "../../landingPage/work/WorkCard";
+import TextReveal from "../../ui/TextReveal";
 
 const cards = [
+// ... (omitted cards for brevity)
   {
     icon: "lucide:target",
     title: "Mission",
@@ -37,17 +39,15 @@ export default function StorySection() {
     <section className="section bg-white">
       <div className="flex flex-col gap-20 max-w-7xl mx-auto">
         <div className="flex flex-col items-center">
-          <h3 className="mb-5 text-center text-blue-300">// Our Story</h3>
+          <h3 className="mb-5 text-center text-blue-300">{"// Our Story"}</h3>
 
-          <p className="max-w-3xl text-center font-bold">
+          <TextReveal className="max-w-3xl text-center font-bold">
             The Royals was founded from a deep understanding of human need and
             the universal desire for a better life. At its heart is a commitment
-            to improving the standard of living for children whose parents{" "}
-            <span className="text-grey-200">
-              or guardians are unable to provide adequately due to economic
-              hardship.
-            </span>
-          </p>
+            to improving the standard of living for children whose parents 
+            or guardians are unable to provide adequately due to economic
+            hardship.
+          </TextReveal>
 
           <Image
             src="/assets/happy-african-children.webp"
@@ -68,14 +68,12 @@ export default function StorySection() {
           <div className="flex flex-col md:flex-row md:justify-between gap-5">
             <p className="text-grey-400">Where Purpose Begins</p>
 
-            <p className="md:max-w-sm lg:max-w-xl font-bold">
+            <TextReveal className="md:max-w-sm lg:max-w-xl font-bold">
               At the core of everything we do is a foundation rooted in purpose,
-              guiding our journey to create meaningful,{" "}
-              <span className="text-grey-200">
-                lasting transformation across communities through every action
-                we take.
-              </span>
-            </p>
+              guiding our journey to create meaningful, 
+              lasting transformation across communities through every action
+              we take.
+            </TextReveal>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 mb-20">

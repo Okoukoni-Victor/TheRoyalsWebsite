@@ -1,17 +1,17 @@
 import Image from "next/image";
+import TextReveal from "../../ui/TextReveal";
 
 export default function SDGsSection() {
   return (
-    <section className="section !pt-0 bg-white">
+    <section className="section pt-0 bg-white">
       <div className="flex flex-col gap-10 md:gap-17 max-w-7xl mx-auto">
         <div className="flex flex-col items-center gap-5">
-          <h3 className="text-center text-blue-300">// Our SDGs</h3>
+          <h3 className="text-center text-blue-300">{"// Our SDGs"}</h3>
 
-          <p className="max-w-xl text-center font-bold">
+          <TextReveal className="max-w-xl text-center font-bold">
             Our work is shaped by global goals, driving us to create impact in
-            education, equality,{" "}
-            <span className="text-grey-200">and community development.</span>
-          </p>
+            education, equality, and community development.
+          </TextReveal>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-21 w-fit mx-auto">
