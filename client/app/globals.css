@@ -81,10 +81,7 @@ body {
 
 /* Section Standard Padding */
 .section {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  @apply py-8 px-4 md:py-16 md:px-8;
 }
 
 @media (min-width: 768px) {

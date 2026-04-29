@@ -31,8 +31,8 @@ const inter = Inter({
 
 export const metadata = {
   title: {
-    template: "The Royals | %s",
-    default: "The Royals | Empowering Communities, Transforming Lives",
+    template: "%s | The Royals",
+    default: "Empowering Communities, Transforming Lives | The Royals",
   },
   description:
     "The Royals is an NGO dedicated to community empowerment, leadership education, and children's development across Africa. Join us in making a lasting impact through our various initiatives and programs.",
