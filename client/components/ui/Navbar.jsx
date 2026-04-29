@@ -67,7 +67,7 @@ export default function Navbar() {
   return (
     <>
       <nav className={`fixed top-0 left-0 w-full z-150 transition-all duration-500 ${
-        isScrolled || isMobileMenuOpen ? 'bg-white/95 backdrop-blur-md shadow-sm h-20' : 'bg-white h-20'
+        isScrolled || isMobileMenuOpen ? 'bg-white/95 backdrop-blur-md h-20' : 'bg-white h-20'
       }`}>
         <div className="max-w-[1440px] h-full mx-auto flex items-center justify-between px-6 lg:px-[95px]">
           
@@ -83,12 +83,12 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <ul className="hidden lg:flex items-center gap-8 xl:gap-12">
+          <ul className="hidden lg:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
               <li key={link.label} className="relative group h-full flex items-center">
                 {link.isDropdown ? (
                   <>
-                    <button className="flex items-center gap-1.5 text-grey-900 font-semibold py-8 focus:outline-none">
+                    <button className="flex items-center gap-1.5 text-grey-900 py-8 focus:outline-none">
                       {link.label}
                       <Icon icon="lucide:chevron-down" width="14" className="transition-transform duration-300 group-hover:rotate-180" />
                     </button>
@@ -111,7 +111,7 @@ export default function Navbar() {
                                 className="group/item relative flex items-center justify-between p-4 transition-all duration-300"
                               >
                                 {/* Left indicator bar */}
-                                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 group-hover/item:h-8 bg-blue-600 transition-all duration-300 rounded-r" />
+                                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 group-hover/item:h-8 bg-blue-300 transition-all duration-300 rounded" />
                                 
                                 <div className="flex flex-col">
                                   <span className="font-bold text-grey-900 text-base transition-colors">
@@ -123,7 +123,7 @@ export default function Navbar() {
                                 </div>
 
                                 {/* Arrow button */}
-                                <div className="w-9 h-9 rounded-full bg-blue-600 flex items-center justify-center opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300">
+                                <div className="w-9 h-9 rounded-full bg-blue-300 flex items-center justify-center opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300">
                                   <Icon icon="lucide:arrow-right" className="text-white" width="18" />
                                 </div>
                               </Link>
@@ -136,7 +136,7 @@ export default function Navbar() {
                 ) : (
                   <Link 
                     href={link.href}
-                    className="text-grey-900 font-semibold hover:text-blue-600 transition-colors py-8 block relative after:content-[''] after:absolute after:bottom-7 after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 after:transition-all hover:after:w-full"
+                    className="text-grey-900 hover:text-blue-300 transition-colors py-8 block"
                   >
                     {link.label}
                   </Link>
@@ -154,7 +154,7 @@ export default function Navbar() {
           </div>
 
           <button 
-            className="flex lg:hidden relative z-[160] p-2 text-grey-900 focus:outline-none"
+            className="flex lg:hidden relative z-160 p-2 text-grey-900 focus:outline-none"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -194,7 +194,7 @@ export default function Navbar() {
                                 <span className="font-bold text-grey-900 text-base">{sub.title}</span>
                                 <span className="text-sm text-grey-400 font-medium">{sub.subtitle}</span>
                               </div>
-                              <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center shrink-0">
+                              <div className="w-8 h-8 rounded-full bg-blue-300 flex items-center justify-center shrink-0">
                                 <Icon icon="lucide:arrow-right" className="text-white" width="16" />
                               </div>
                             </Link>

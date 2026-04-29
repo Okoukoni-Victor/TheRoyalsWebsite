@@ -11,7 +11,7 @@ const founders = [
       <p className="max-w-xl text-grey-300">
         <strong className="font-bold text-grey-600">Solomon Emakwu</strong> is a
         leadership enthusiast, writer, and an educator. He is passionate about
-        leadership, education, and children development. He holds a Bachelor's
+        leadership, education, and children development. He holds a Bachelor&apos;s
         degree in English from the prestigious University of Lagos. <br />
         <br /> Driven by his passion for children, he recently launched{" "}
         <strong className="font-bold text-grey-600">Urgent 2K Campaign</strong>,
@@ -19,7 +19,7 @@ const founders = [
         materials.
         <br />
         <br /> A positive and goal-oriented individual, Solomon intends to
-        pursue his Master's in Leadership and Education, also in Childhood
+        pursue his Master&apos;s in Leadership and Education, also in Childhood
         Education where he is confident of learning all he needs to not only
         change the course of education in his Africa but also impact the lives
         of children.
@@ -60,7 +60,7 @@ const founders = [
 
 export default function Founders() {
   return (
-    <section className="section !pt-0 bg-white">
+    <section className="section pt-0 bg-white">
       <div className="flex flex-col gap-20 max-w-7xl mx-auto">
         <div className="flex flex-col items-center gap-4">
           <h3 className="text-center">Meet Our Founders</h3>
