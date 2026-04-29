@@ -1,22 +1,22 @@
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 
-export default function WorkCard({ 
-  icon, 
-  title, 
-  description, 
-  bgColor, 
+export default function WorkCard({
+  icon,
+  title,
+  description,
+  bgColor,
   textColor = "text-grey-900",
   patternSvg,
-  patternClassName = ""
+  patternClassName = "",
 }) {
   return (
-    <div className={`relative ${bgColor} rounded-2xl p-8 lg:p-10 flex flex-col min-h-[420px] overflow-hidden group`}>
+    <div
+      className={`relative ${bgColor} rounded-2xl p-8 lg:p-10 flex flex-col min-h-[420px] overflow-hidden group`}
+    >
       {/* Icon Badge */}
-      <div className="relative z-10 w-14 h-14 bg-white rounded-lg shadow-sm mb-16 flex items-center justify-center">
-        {icon && (
-          <Icon icon={icon} className="w-7 h-7 text-grey-900" />
-        )}
+      <div className="relative z-10 w-14 h-14 bg-white rounded-full shadow-sm mb-16 flex items-center justify-center">
+        {icon && <Icon icon={icon} className="w-7 h-7 text-grey-900" />}
       </div>
 
       {/* Content */}
@@ -27,8 +27,10 @@ export default function WorkCard({
 
       {/* Background Pattern */}
       {patternSvg && (
-        <div className={`absolute top-0 right-0 pointer-events-none opacity-40 group-hover:opacity-60 transition-opacity duration-500 ${patternClassName}`}>
-          <Image 
+        <div
+          className={`absolute top-0 right-0 pointer-events-none opacity-40 group-hover:opacity-60 transition-opacity duration-500 ${patternClassName}`}
+        >
+          <Image
             src={patternSvg}
             alt=""
             width={200}
