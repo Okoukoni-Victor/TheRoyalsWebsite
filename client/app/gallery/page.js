@@ -2,31 +2,11 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-
-const galleryData = {
-  media: {
-    2023: [
-      "https://via.placeholder.com/300x200?text=Image+1",
-      "https://via.placeholder.com/300x200?text=Image+2",
-      "https://via.placeholder.com/300x200?text=Image+3"
-    ],
-    2024: [
-      "https://via.placeholder.com/300x200?text=Image+4",
-      "https://via.placeholder.com/300x200?text=Image+5",
-      "https://via.placeholder.com/300x200?text=Image+6"      
-    ],
-    video: {
-      2023: [
-        "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        "https://www.youtube.com/embed/9bZkp7q19f0" 
-      ],
-      2024: [
-        "https://www.youtube.com/embed/3JZ_D3ELwOQ",
-        "https://www.youtube.com/embed/L_jWHffIx5E" 
-      ]
-    }
-  }
+export const metadata = {
+  title: "Gallery",
+  description: "Explore the visual story of our impact. See The Royals in action across various African communities through our gallery of programs and initiatives.",
 };
+
 const Gallery = () => {
   const [activeType, setActiveType] = useState(null);
   const [activeYear, setActiveYear] = useState(null);

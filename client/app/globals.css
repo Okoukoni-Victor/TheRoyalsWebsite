@@ -81,20 +81,9 @@ body {
 
 /* Section Standard Padding */
 .section {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  @apply py-8 px-4 md:py-16 md:px-8;
 }
 
-@media (min-width: 768px) {
-  .section {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-}
 
 /* Typography Scale */
 h1,

@@ -42,7 +42,7 @@ export default function MilestonesSection() {
   const activeMilestone = milestones.find((m) => m.id === activeId);
 
   return (
-    <section className="section !pt-0 bg-white">
+    <section className="section pt-0 bg-white">
       <div className="flex flex-col gap-12 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row lg:justify-between gap-12">
           <div className="flex flex-col gap-4">
@@ -77,6 +77,8 @@ export default function MilestonesSection() {
                   <button
                     type="button"
                     onClick={() => setActiveId(milestone.id)}
+                    aria-label={`Show milestones for ${milestone.year}`}
+                    aria-pressed={milestone.id === activeId}
                     className={`cursor-pointer px-4 py-1.5 rounded-[30px] text-sm font-medium text-white ${
                       milestone.id === activeId ? "bg-blue-300" : "bg-grey-200"
                     }`}
@@ -88,7 +90,7 @@ export default function MilestonesSection() {
             </div>
 
             {/* Content */}
-            <div className="flex flex-col gap-6">
+            <div aria-live="polite" className="flex flex-col gap-6">
               <h5 id={activeMilestone.id}>{activeMilestone.title}</h5>
 
               <ul

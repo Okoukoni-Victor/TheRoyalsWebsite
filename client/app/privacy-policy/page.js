@@ -2,9 +2,9 @@ import PrivacyPolicyIntro from "../../components/privacyPolicyPage/intro/Privacy
 import PrivacyPolicyContent from "../../components/privacyPolicyPage/content/PrivacyPolicyContent";
 
 export const metadata = {
-  title: "Privacy Policy | The Royals",
+  title: "Privacy Policy",
   description:
-    "Learn how The Royals collects, uses, and protects your personal information.",
+    "Review The Royals' privacy policy to understand how we collect, use, and safeguard your personal data.",
 };
 
 export default function PrivacyPolicyPage() {

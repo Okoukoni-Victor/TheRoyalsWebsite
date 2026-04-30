@@ -50,7 +50,7 @@ const sections = [
           <li>Process volunteer, partnership, or sponsorship interests.</li>
           <li>Improve website functionality and user experience.</li>
           <li>Monitor and analyze usage patterns.</li>
-          <li>Communicate updates related to The Royals' initiatives.</li>
+          <li>Communicate updates related to The Royals&apos; initiatives.</li>
         </ul>
       </>
     ),
