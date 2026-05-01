@@ -18,6 +18,7 @@ export default function ImpactCard({
           height={42}
           alt="Category" 
           className="w-full h-auto -translate-y-2"
+          style={{ width: '100%', height: 'auto' }}
         />
       </div>
 
@@ -46,6 +47,7 @@ export default function ImpactCard({
             height={300}
             alt="" 
             className="translate-x-10 translate-y-10 opacity-90"
+            style={{ width: 'auto', height: 'auto' }}
           />
         </div>
       )}

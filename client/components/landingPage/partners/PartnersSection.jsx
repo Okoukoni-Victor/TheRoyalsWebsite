@@ -31,6 +31,7 @@ export default function PartnersSection() {
                   src={partner.logo} 
                   alt={partner.name} 
                   fill 
+                  sizes="(max-width: 768px) 50vw, 25vw"
                   className="object-contain" 
                 />
               </div>
