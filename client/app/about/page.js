@@ -6,9 +6,9 @@ import MilestonesSection from "@/components/aboutPage/milestones/MilestonesSecti
 import Founders from "@/components/aboutPage/founders/Founders";
 
 export const metadata = {
-  title: "About | The Royals",
+  title: "About",
   description:
-    "Learn about The Royals and our mission to empower communities across Africa.",
+    "Discover the story behind The Royals, our mission, core values, and the visionary leaders driving community empowerment across Africa.",
 };
 
 export default function AboutPage() {

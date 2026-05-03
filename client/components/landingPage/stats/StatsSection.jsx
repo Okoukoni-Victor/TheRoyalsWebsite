@@ -3,20 +3,21 @@ import Image from "next/image";
 export default function StatsSection() {
   const stats = [
     {
-      number: "300",
-      label: "Lives Impacted",
-      description: "Students and families directly benefited."
+      number: "1250",
+      description: "lives Impacte"
     },
     {
-      number: "20",
-      label: "Successful Programs",
-      description: "Initiatives completed across communities."
+      number: "7",
+      description: "Communities Reached"
     },
     {
-      number: "58",
-      label: "Partner Organizations",
-      description: "Collaborating for greater impact."
-    }
+      number: "7",
+      description: "Successful Programs"
+    },
+    {
+      number: "38",
+      description: "Volunteers Engaged"
+    },
   ];
 
   return (
@@ -37,11 +38,10 @@ export default function StatsSection() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-16">
               {stats.map((stat, index) => (
                 <div key={index} className="space-y-4 group">
-                  <div className="text-white">
+                  <h4 className="text-white">
                     {stat.number}
-                  </div>
+                  </h4>
                   <div className="space-y-2">
-                    <div className="text-xl font-bold tracking-tight">{stat.label}</div>
                     <p className="">{stat.description}</p>
                   </div>
                 </div>

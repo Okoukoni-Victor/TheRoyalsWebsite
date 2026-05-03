@@ -7,7 +7,7 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
     
     return(
-        <footer className='section bg-black text-white'>
+        <footer className='pt-8 md:pt-16 pb-4 px-4 md:px-8 bg-black text-white'>
             <div className='flex justify-end mb-24 max-w-7xl mx-auto'>
                  <h1 className='text-6xl md:text-8xl font-medium flex items-baseline gap-2'>
                       Get Involved

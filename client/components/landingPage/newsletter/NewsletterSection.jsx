@@ -6,8 +6,8 @@ export default function NewsletterSection() {
     <div className="lg:px-32 mb-16">
       <section className="section bg-blue-300 rounded-2xl">
       <div className="max-w-3xl mx-auto text-center text-white">
-        <h2 className="mb-6 font-helixa">Stay Connected</h2>
-        <p className="text-blue-50/80 mb-12 text-lg">
+        <h2 className="mb-6 ">Stay Connected</h2>
+        <p className="text-blue-50/80 mb-12 max-w-2xl text-lg">
           Subscribe to our newsletter for updates on our programs, impact stories, and how you can get involved.
         </p>
 
@@ -17,7 +17,7 @@ export default function NewsletterSection() {
             <input 
               type="text" 
               placeholder="Full Name"
-              className="w-full bg-white/10 border border-white/10 rounded-xl px-6 py-4 text-white placeholder:text-blue-50/50 outline-none focus:bg-white/20 transition-all duration-300"
+              className="w-full bg-white/10 border border-white/10 rounded-xl px-6 py-4 text-white placeholder:text-gray-900 outline-none focus:bg-white/20 transition-all duration-300"
             />
           </div>
 
@@ -26,7 +26,7 @@ export default function NewsletterSection() {
             <input 
               type="email" 
               placeholder="Email Address"
-              className="w-full bg-white/10 border border-white/10 rounded-xl px-6 py-4 text-white placeholder:text-blue-50/50 outline-none focus:bg-white/20 transition-all duration-300"
+              className="w-full bg-white/10 border border-white/10 rounded-xl px-6 py-4 text-white placeholder:text-gray-900 outline-none focus:bg-white/20 transition-all duration-300"
             />
           </div>
 
