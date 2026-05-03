@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Icon } from '@iconify/react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -19,12 +20,12 @@ const NAV_LINKS = [
       {
         title: "Community Support & Empowerment",
         subtitle: "Clothe A BoyChild Initiative (CABI)",
-        href: "/initiative/cabi"
+        href: "/initiatives/cabi"
       },
       {
         title: "Education",
         subtitle: "Urgent 2K Campaign",
-        href: "/initiative/urgent-2k"
+        href: "/initiatives/urgent-2k"
       },
       {
         title: "Leadership Pathway",
@@ -37,9 +38,18 @@ const NAV_LINKS = [
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeMobileSubmenu, setActiveMobileSubmenu] = useState(null);
+
+  const isActive = (href) => {
+    if (href === '#') return false;
+    if (href === '/') return pathname === '/';
+    return pathname.startsWith(href);
+  };
+
+  const isInitiativesActive = pathname.startsWith('/initiative');
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -71,13 +81,13 @@ export default function Navbar() {
       }`}>
         <div className="max-w-[1440px] h-full mx-auto flex items-center justify-between px-6 lg:px-[95px]">
           
-          <Link href="/" className="relative z-160" onClick={() => setIsMobileMenuOpen(false)}>
+          <Link href="/" className="relative z-160 block w-32 md:w-40 h-10" onClick={() => setIsMobileMenuOpen(false)}>
             <Image 
               src="/assets/navLogo-blue.svg"
               alt="The Royals Logo"
-              width={160}
-              height={40}
-              className="w-32 md:w-40 h-auto object-contain"
+              fill
+              sizes="(max-width: 768px) 128px, 160px"
+              className="object-contain"
               priority
             />
           </Link>
@@ -88,7 +98,9 @@ export default function Navbar() {
               <li key={link.label} className="relative group h-full flex items-center">
                 {link.isDropdown ? (
                   <>
-                    <button className="flex items-center gap-1.5 text-grey-900 py-8 focus:outline-none">
+                    <button className={`flex items-center gap-1.5 py-8 focus:outline-none transition-colors ${
+                      isInitiativesActive ? 'text-blue-300 font-bold' : 'text-grey-900'
+                    }`}>
                       {link.label}
                       <Icon icon="lucide:chevron-down" width="14" className="transition-transform duration-300 group-hover:rotate-180" />
                     </button>
@@ -108,13 +120,19 @@ export default function Navbar() {
                               <Link 
                                 key={idx} 
                                 href={sub.href}
-                                className="group/item relative flex items-center justify-between p-4 transition-all duration-300"
+                                className={`group/item relative flex items-center justify-between p-4 transition-all duration-300 ${
+                                  pathname === sub.href ? 'bg-blue-50/50' : ''
+                                }`}
                               >
                                 {/* Left indicator bar */}
-                                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 group-hover/item:h-8 bg-blue-300 transition-all duration-300 rounded" />
+                                <div className={`absolute left-0 top-1/2 -translate-y-1/2 w-1 transition-all duration-300 rounded ${
+                                  pathname === sub.href ? 'h-8 bg-blue-300' : 'h-0 bg-blue-300'
+                                } group-hover/item:h-8`} />
                                 
                                 <div className="flex flex-col">
-                                  <span className="font-bold text-grey-900 text-base transition-colors">
+                                  <span className={`font-bold text-base transition-colors ${
+                                    pathname === sub.href ? 'text-blue-300' : 'text-grey-900'
+                                  }`}>
                                     {sub.title}
                                   </span>
                                   <span className="text-sm text-grey-400 font-medium">
@@ -123,7 +141,9 @@ export default function Navbar() {
                                 </div>
 
                                 {/* Arrow button */}
-                                <div className="w-9 h-9 rounded-full bg-blue-300 flex items-center justify-center opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300">
+                                <div className={`w-9 h-9 rounded-full bg-blue-300 flex items-center justify-center transition-all duration-300 ${
+                                  pathname === sub.href ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-2'
+                                } group-hover/item:opacity-100 group-hover/item:translate-x-0`}>
                                   <Icon icon="lucide:arrow-right" className="text-white" width="18" />
                                 </div>
                               </Link>
@@ -136,7 +156,9 @@ export default function Navbar() {
                 ) : (
                   <Link 
                     href={link.href}
-                    className="text-grey-900 hover:text-blue-300 transition-colors py-8 block"
+                    className={`transition-colors py-8 block ${
+                      isActive(link.href) ? 'text-blue-300 font-bold' : 'text-grey-900 hover:text-blue-300'
+                    }`}
                   >
                     {link.label}
                   </Link>
@@ -174,10 +196,12 @@ export default function Navbar() {
                 <div className="space-y-4">
                   <button 
                     onClick={() => setActiveMobileSubmenu(activeMobileSubmenu === link.label ? null : link.label)}
-                    className="w-full flex items-center justify-between text-lg font-medium text-grey-800"
+                    className={`w-full flex items-center justify-between text-lg font-medium transition-colors ${
+                      isInitiativesActive ? 'text-blue-300 font-bold' : 'text-grey-800'
+                    }`}
                   >
                     {link.label}
-                    <Icon icon="lucide:chevron-down" width="20" className={`text-grey-400 transition-transform ${activeMobileSubmenu === link.label ? 'rotate-180' : ''}`} />
+                    <Icon icon="lucide:chevron-down" width="20" className={`transition-transform ${activeMobileSubmenu === link.label ? 'rotate-180' : ''} ${isInitiativesActive ? 'text-blue-300' : 'text-grey-400'}`} />
                   </button>
                   
                   {activeMobileSubmenu === link.label && (
@@ -187,11 +211,15 @@ export default function Navbar() {
                           {!sub.isComingSoon ? (
                             <Link 
                               href={sub.href} 
-                              className="flex items-center justify-between py-3 border-b border-grey-50 last:border-0" 
+                              className={`flex items-center justify-between py-3 border-b border-grey-50 last:border-0 transition-colors ${
+                                pathname === sub.href ? 'bg-blue-50/30' : ''
+                              }`} 
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
                               <div className="flex flex-col">
-                                <span className="font-bold text-grey-900 text-base">{sub.title}</span>
+                                <span className={`font-bold text-base ${
+                                  pathname === sub.href ? 'text-blue-300' : 'text-grey-900'
+                                }`}>{sub.title}</span>
                                 <span className="text-sm text-grey-400 font-medium">{sub.subtitle}</span>
                               </div>
                               <div className="w-8 h-8 rounded-full bg-blue-300 flex items-center justify-center shrink-0">
@@ -214,7 +242,9 @@ export default function Navbar() {
               ) : (
                 <Link 
                   href={link.href}
-                  className="text-lg font-medium text-grey-800"
+                  className={`text-lg font-medium transition-colors ${
+                    isActive(link.href) ? 'text-blue-300 font-bold' : 'text-grey-800'
+                  }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}

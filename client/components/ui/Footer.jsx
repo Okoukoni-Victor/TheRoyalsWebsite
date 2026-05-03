@@ -20,12 +20,14 @@ export default function Footer() {
 
                  {/* Logo Section */}
                  <div className='space-y-6'>
-                <Image src='/assets/footerLogo-white.svg'
-                 alt='The Royal Logo'
-                 width={180}
-                 height={60}
-                className='object-contain brightness-0 invert'
-                />
+                  <div className='relative w-[180px] h-[60px]'>
+                    <Image src='/assets/footerLogo-white.svg'
+                     alt='The Royal Logo'
+                     fill
+                     sizes="180px"
+                    className='object-contain brightness-0 invert'
+                    />
+                  </div>
                 <p className='text-gray-400 text-sm leading-relaxed max-w-[280px]'>
                     Empowering Communities through  education, mentoring,
                     and sustainable development initiatives
@@ -94,13 +96,15 @@ export default function Footer() {
                 {/* Colorful shapes at the footer bottom  */}
 
                 <div className='flex justify-left w-full'>
+                  <div className='relative w-[450px] h-[60px] max-w-full'>
                     <Image
                     src="/assets/footer-image.png"
                     alt='Decorative Shapes'
-                    width={450}
-                    height={60}
-                    className=' object-contain'
-                 />
+                    fill
+                    sizes="(max-width: 768px) 100vw, 450px"
+                    className='object-contain'
+                    />
+                  </div>
                 </div>
                 </div>            
             </footer>

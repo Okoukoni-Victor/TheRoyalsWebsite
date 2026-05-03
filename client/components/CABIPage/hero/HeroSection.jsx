@@ -4,8 +4,9 @@ export default function HeroSection() {
   return (
     <section className="section !pt-50 !pb-0 !px-0 bg-white">
       <div className="relative overflow-hidden">
-        <div className="flex flex-col gap-[19px] mb-10 !px-[1rem] md:!px-[3rem]">
-          <span className="inline-block w-fit mb-[19px] rounded-[40px] border border-grey-900 px-[26px] py-[9px] !leading-[150%] !tracking-[0.2%] !text-[15px] text-grey-900">
+        <div className="flex flex-col gap-[19px] mb-10 px-16 md:px-12">
+          <span className="inline-block w-fit mb-[19px] rounded-[40px] border border-grey-900 px-[26px] py-[9px] !leading-[150%] !tracking-[0.2%] !
+          text-[15px] text-grey-900">
             Community Support & Empowerment
           </span>
 

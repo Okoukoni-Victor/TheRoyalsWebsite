@@ -22,7 +22,6 @@ const IMAGES = [
 export default function CurvedMarquee() {
   const containerRef = useRef(null);
   const cardsRef = useRef([]);
-  const pathRef = useRef(null);
 
   useGSAP(
     () => {
@@ -35,11 +34,10 @@ export default function CurvedMarquee() {
         x: (i) => i * cardWidth,
         y: 0,
         rotation: 0,
-        transformOrigin: "center top",
       });
 
       let currentX = 0;
-      const speed = 1.5;
+      const speed = 1.2; // Slightly slower for smoother straight marquee
 
       const updateCards = () => {
         currentX -= speed;
@@ -49,54 +47,18 @@ export default function CurvedMarquee() {
           currentX = 0;
         }
 
-        const width = window.innerWidth;
-        const screenCenter = width / 2;
-        
-        // Responsive curve parameters
-        let curveFactor, baseHeight, svgPath;
-        
-        if (width < 640) { // Mobile
-          curveFactor = 0.0004; // Much deeper curve
-          baseHeight = 100;
-          svgPath = "M -100 10 Q 500 100 1100 10";
-        } else if (width < 1024) { // Tablet
-          curveFactor = 0.0006;
-          baseHeight = 140;
-          svgPath = "M -100 30 Q 500 350 1100 30";
-        } else { // Desktop
-          curveFactor = 0.00015;
-          baseHeight = 150;
-          svgPath = "M -100 50 Q 500 350 1100 50";
-        }
-
-        // Update SVG path to match the curve intensity
-        if (pathRef.current && pathRef.current.getAttribute("d") !== svgPath) {
-          pathRef.current.setAttribute("d", svgPath);
-        }
-
         cards.forEach((card, i) => {
           let cardX = i * cardWidth + currentX;
 
-          if (cardX < -cardWidth) {
-            cardX += totalWidth * 2;
-          }
-
+          // Wrap around logic for seamless loop
           const wrappedX =
             (((cardX % (totalWidth * 2)) + totalWidth * 2) % (totalWidth * 2)) -
             cardWidth;
 
-          const distanceFromCenter = wrappedX + cardWidth / 2 - screenCenter;
-
-          const yOffset =
-            baseHeight - Math.pow(distanceFromCenter, 2) * curveFactor;
-
-          const slope = -2 * curveFactor * distanceFromCenter;
-          const rotation = Math.atan(slope) * (180 / Math.PI);
-
           gsap.set(card, {
             x: wrappedX,
-            y: yOffset,
-            rotation: rotation,
+            y: 0,
+            rotation: 0,
           });
         });
       };
@@ -112,35 +74,23 @@ export default function CurvedMarquee() {
 
   return (
     <div
-      className="relative w-full h-[500px] overflow-hidden "
+      className="relative w-full h-[300px] overflow-hidden flex items-center"
       ref={containerRef}
     >
-      {/* SVG Path - Concave (Smile) */}
-      <svg
-        className="absolute top-8 md:-top-15 left-0 w-full h-full pointer-events-none opacity-60"
-        preserveAspectRatio="none"
-        viewBox="0 0 1000 500"
-      >
-        <path
-          ref={pathRef}
-          d="M -100 50 Q 500 350 1100 50"
-          fill="none"
-          stroke="white"
-          strokeWidth="1.5"
-        />
-      </svg>
+      {/* Horizontal Hanger Line */}
+      <div className="absolute top-4 left-0 w-full h-[1.5px] bg-white/40 pointer-events-none z-0" />
 
       <div className="relative w-full h-full">
         {IMAGES.map((src, i) => (
           <div
             key={i}
             ref={(el) => (cardsRef.current[i] = el)}
-            className="absolute top-0 left-0 w-[300px] h-[220px] will-change-transform"
+            className="absolute top-1/2 -translate-y-1/2 left-0 w-[300px] h-[220px] will-change-transform"
           >
             {/* The Polaroid Card */}
-            <div className="relative w-full h-full bg-white rounded-xl p-3 shadow-2xl flex flex-col items-center">
+            <div className="relative w-full h-full bg-white rounded-xl p-3 shadow-xl flex flex-col items-center">
               {/* Tape/Pin element at the top */}
-              <div className="absolute -top-4 bg-white/90 backdrop-blur-sm w-8 h-10 rounded-sm shadow-sm flex items-start justify-center pt-2 z-10 border border-grey-50">
+              <div className="absolute -top-9 bg-white/90 backdrop-blur-sm w-8 h-13 rounded-sm shadow-sm flex items-start justify-center pt-2 z-10 border border-grey-50">
                 <div className="w-2 h-2 rounded-full bg-grey-300"></div>
               </div>
               

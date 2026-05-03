@@ -8,7 +8,7 @@ export const galleryData = {
         title: "2020 — 2025 Outreach",
         location: "Orile-Agege, Eruwa, Atan-Ota, Oshodi, Ajegunle And Pen Cinema-Agege.",
         src: "https://images.unsplash.com/photo-1681745207463-d51c8f8d24e2",
-        thumbnail: "/assets/gallery/boy-initiative-thumbnail.svg"
+        thumbnail: "/gallery/nysc-with-children-thumb-nail.svg"
       },
       {
         id: "cabi-img-2",
@@ -24,7 +24,7 @@ export const galleryData = {
         title: "Community Impact Documentary",
         location: "Oshodi Outreach",
         src: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        thumbnail: "/assets/gallery/cabi-thumb-nail.svg"
+        thumbnail: "/gallery/tshirt-presentation-thumb-nail.svg"
       }
     ]
   },
