@@ -1,4 +1,4 @@
-// src/data/galleryData.js
+
 
 export const galleryData = {
   "CABI": {

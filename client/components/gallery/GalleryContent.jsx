@@ -18,7 +18,7 @@ export default function GalleryContent() {
     <div className="bg-foreground min-h-screen">
      <section className='relative w-full bg-black flex flex-col items-center pt-20 pb-32 overflow-hidden px-10 min-h-screen py-10'>
       {/* Background Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-900/40 to-black pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-b from-gray-900/40 to-black pointer-events-none" />
 
       {/* 1. Header - Tightened margin to 'hug' the images */}
       <div className='flex flex-col gap-4 justify-center items-center z-40 relative mb-4 px-4'>
@@ -31,7 +31,7 @@ export default function GalleryContent() {
       </div>
 
       {/* 2. Dotted Line */}
-      <div className="absolute top-[55%] left-0 w-full border-t border-dotted border-blue-400/20 z-0 pointer-events-none" />
+      <div className="absolute top-[100%] left-0 w-full border-t border-dotted border-blue z-0 pointer-events-none" />
 
       {/* 3. Images Wrapper - Negative margin pulls images up to the text */}
       <div className='relative w-full max-w-7xl mx-auto h-[600px] md:h-[700px] z-10 -mt-10 md:-mt-16'>
@@ -40,39 +40,43 @@ export default function GalleryContent() {
         <div className='absolute left-[2%] lg:left-[5%] top-10 flex flex-col bg-white shadow-2xl p-1.5 pb-8 rotate-[-8deg] w-[260px] md:w-[310px] z-10 transition-all'>
           <div className="relative">
             <Image
-              src='/assets/gallery/top-left.svg'
+              src='/gallery/top-left.svg'
               alt='Left Frame'
               width={300} height={380}
               className='w-full h-auto object-cover'
             />
             {/* Inset Frame */}
             <div className="absolute -left-6 top-1/2 -translate-y-1/2 w-20 h-20 border-4 border-white shadow-xl z-20 overflow-hidden">
-              <Image src='/assets/gallery/smaller-left.svg' alt='Detail' fill className="object-cover" />
+              <Image src='/assets/gallery/smaller-left.svg'
+               alt='Detail'
+               height={200}
+               width={200} 
+               className="object-cover" />
             </div>
           </div>
-          <p className='mt-5 text-left text-zinc-800 text-[10px] leading-relaxed px-3 font-medium'>
+          {/* <p className='mt-5 text-left text-zinc-800 text-[10px] leading-relaxed px-3 font-medium'>
             We delivered school essentials to this classroom, ensuring every student is better prepared.
-          </p>
+          </p> */}
         </div>
 
         {/* CENTER CARD */}
         <div className='absolute left-1/2 -translate-x-1/2 top-28 flex flex-col bg-white shadow-3xl p-2 pb-12 w-[300px] md:w-[410px] z-30'>
           <Image
-            src='/assets/gallery/center.svg'
+            src='/gallery/center.svg'
             alt='Center Frame'
             width={410} height={460}
             className='w-full h-auto object-cover'
           />
-          <p className='mt-6 text-left text-zinc-800 text-xs font-semibold px-5 leading-relaxed'>
+          {/* <p className='mt-6 text-left text-zinc-800 text-xs font-semibold px-5 leading-relaxed'>
             Clothing essentials provided to children in Mafoluku, supporting their wellbeing.
-          </p>
+          </p> */}
         </div>
 
         {/* RIGHT CARD */}
         <div className='absolute right-[2%] lg:right-[5%] top-16 flex flex-col bg-white shadow-2xl p-1.5 pb-8 rotate-[8deg] w-[240px] md:w-[300px] z-10 transition-all'>
           <div className="relative">
             <Image
-              src='/assets/gallery/top-right.svg'
+              src='/gallery/top-right.svg'
               alt='Right Frame'
               width={300} 
               height={350}
@@ -80,7 +84,7 @@ export default function GalleryContent() {
             />
              {/* Inset Frame */}
              <div className="absolute -right-4 -top-6 w-16 h-16 border-4 border-white shadow-xl z-20 overflow-hidden">
-              <Image src='/assets/gallery/smaller-right.jpg' alt='Detail' fill className="object-cover" />
+              <Image src='/gallery/smaller-right.svg' alt='Detail' height={200} width={200} className="object-cover" />
             </div>
 
             {/* Chat with us Pill */}
@@ -90,9 +94,9 @@ export default function GalleryContent() {
               <span className="text-[10px] font-bold whitespace-nowrap uppercase tracking-wider">Chat with us</span>
             </div>
           </div>
-          <p className='mt-5 text-left text-zinc-800 text-[10px] leading-relaxed px-3 font-medium'>
+          {/* <p className='mt-5 text-left text-zinc-800 text-[10px] leading-relaxed px-3 font-medium'>
             We provided essential school materials to these students to help them show up ready.
-          </p>
+          </p> */}
         </div>
       </div>
 
