@@ -38,20 +38,23 @@ export default function GalleryContent() {
         
         {/* LEFT CARD */}
         <div className='absolute left-[2%] lg:left-[5%] top-10 flex flex-col bg-white shadow-2xl p-1.5 pb-8 rotate-[-8deg] w-[260px] md:w-[310px] z-10 transition-all'>
-          <div className="relative">
+          <div className="relative h-[280px] md:h-[350px]">
             <Image
               src='/gallery/top-left.svg'
               alt='Left Frame'
-              width={300} height={380}
-              className='w-full h-auto object-cover'
+              fill
+              sizes="(max-width: 768px) 260px, 310px"
+              className='object-cover'
             />
             {/* Inset Frame */}
             <div className="absolute -left-6 top-1/2 -translate-y-1/2 w-20 h-20 border-4 border-white shadow-xl z-20 overflow-hidden">
-              <Image src='/assets/gallery/smaller-left.svg'
-               alt='Detail'
-               height={200}
-               width={200} 
-               className="object-cover" />
+              <Image 
+                src='/gallery/smaller-left.svg' 
+                alt='Detail' 
+                fill 
+                sizes="80px"
+                className="object-cover" 
+              />
             </div>
           </div>
           {/* <p className='mt-5 text-left text-zinc-800 text-[10px] leading-relaxed px-3 font-medium'>
@@ -61,38 +64,43 @@ export default function GalleryContent() {
 
         {/* CENTER CARD */}
         <div className='absolute left-1/2 -translate-x-1/2 top-28 flex flex-col bg-white shadow-3xl p-2 pb-12 w-[300px] md:w-[410px] z-30'>
-          <Image
-            src='/gallery/center.svg'
-            alt='Center Frame'
-            width={410} height={460}
-            className='w-full h-auto object-cover'
-          />
-          {/* <p className='mt-6 text-left text-zinc-800 text-xs font-semibold px-5 leading-relaxed'>
+          <div className="relative h-[300px] md:h-[400px]">
+            <Image
+              src='/gallery/center.svg'
+              alt='Center Frame'
+              fill
+              sizes="(max-width: 768px) 300px, 410px"
+              className='object-cover'
+            />
+          </div>
+          <p className='mt-6 text-left text-zinc-800 text-xs font-semibold px-5 leading-relaxed'>
             Clothing essentials provided to children in Mafoluku, supporting their wellbeing.
-          </p> */}
+          </p> 
         </div>
 
         {/* RIGHT CARD */}
         <div className='absolute right-[2%] lg:right-[5%] top-16 flex flex-col bg-white shadow-2xl p-1.5 pb-8 rotate-[8deg] w-[240px] md:w-[300px] z-10 transition-all'>
-          <div className="relative">
+          <div className="relative h-[250px] md:h-[320px]">
             <Image
               src='/gallery/top-right.svg'
               alt='Right Frame'
-              width={300} 
-              height={350}
-              className='w-full h-auto object-cover'
+              fill
+              sizes="(max-width: 768px) 240px, 300px"
+              className='object-cover'
             />
              {/* Inset Frame */}
              <div className="absolute -right-4 -top-6 w-16 h-16 border-4 border-white shadow-xl z-20 overflow-hidden">
-              <Image src='/gallery/smaller-right.svg' alt='Detail' height={200} width={200} className="object-cover" />
+              <Image 
+                src='/gallery/smaller-right.svg' 
+                alt='Detail' 
+                fill 
+                sizes="64px"
+                className="object-cover" 
+              />
             </div>
 
-            {/* Chat with us Pill */}
-            <div className="absolute -right-20 bottom-30 z-[100] bg-[#4ADE80] text-white py-2 px-4
-             rounded-full shadow-lg flex items-center gap-2 cursor-pointer hover:scale-105 transition-transform">
-              <Phone size={25} fill="currentColor" />
-              <span className="text-[10px] font-bold whitespace-nowrap uppercase tracking-wider">Chat with us</span>
-            </div>
+
+            
           </div>
           {/* <p className='mt-5 text-left text-zinc-800 text-[10px] leading-relaxed px-3 font-medium'>
             We provided essential school materials to these students to help them show up ready.
@@ -168,6 +176,7 @@ export default function GalleryContent() {
                   src={item.thumbnail || item.src} 
                   alt={item.title} 
                   fill 
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-500" 
                 />
                 

@@ -32,7 +32,7 @@ export default function StatsSection() {
         </div>
 
         {/* Stats and Image Grid */}
-        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
           {/* Stats Grid */}
           <div className="w-full lg:w-1/2">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-16">
