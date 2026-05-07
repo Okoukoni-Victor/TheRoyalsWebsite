@@ -14,8 +14,8 @@ export default function ImpactCard({
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[320px] lg:max-w-[380px] h-12 pointer-events-none">
         <Image 
           src={tagSvg} 
-          fill
-          sizes="(max-width: 1024px) 320px, 380px"
+          width={500}
+          height={200}
           alt="Category" 
           className="object-contain -translate-y-2"
         />

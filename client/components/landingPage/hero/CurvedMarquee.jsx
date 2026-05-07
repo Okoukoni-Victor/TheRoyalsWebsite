@@ -74,7 +74,7 @@ export default function CurvedMarquee() {
 
   return (
     <div
-      className="relative w-full h-[300px] overflow-hidden flex items-center"
+      className="relative mt-8 w-full h-[300px] overflow-hidden flex items-center"
       ref={containerRef}
     >
       {/* Horizontal Hanger Line */}
