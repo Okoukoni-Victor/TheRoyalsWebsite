@@ -4,14 +4,14 @@ export default function HeroSection() {
   return (
     <section className="section !pt-50 !pb-0 !px-0 bg-white">
       <div className="relative overflow-hidden">
-        <div className="flex flex-col gap-[19px] mb-10 px-4 md:px-[3rem]">
-          <span className="inline-block w-fit rounded-[40px] border border-grey-900 px-[26px] py-[9px] leading-[150%] tracking-[0.2%] text-[15px] text-grey-900">
+        <div className="flex flex-col gap-[19px] mb-10 !px-[1rem] md:!px-[3rem]">
+          <span className="inline-block w-fit rounded-[40px] border border-grey-900 px-[26px] py-[9px] !leading-[150%] !tracking-[0.2%] !text-[15px] text-grey-900">
             Education
           </span>
 
           <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-5">
             <h1 className="flex flex-col gap-[10px] md:gap-[30px]">
-              <span className="leading-[105%] !tracking-[-4%] !text-[52px] md:!text-[80px] text-grey-900">
+              <span className="!leading-[105%] !tracking-[-4%] !text-[52px] md:!text-[80px] text-grey-900">
                 We fund urgent
               </span>{" "}
               <span className="inline-flex items-center gap-3">
