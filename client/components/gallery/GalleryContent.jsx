@@ -1,25 +1,21 @@
 "use client"
-import React, { useState } from 'react';
-import Image from 'next/image';
-import { Phone } from 'lucide-react';
-import { galleryData } from '@/components/gallery/GalleryData'; //
 
+import React from 'react';
+import GalleryHero from './hero/GalleryHero';
+import GallerySection from './content/GallerySection';
+
+/**
+ * GalleryContent Component
+ * Acts as the main entry point for the Gallery page, 
+ * composing the Hero and the interactive Content sections.
+ */
 export default function GalleryContent() {
-  const [activeCampaign, setActiveCampaign] = useState('CABI');
-  const [activeMediaType, setActiveMediaType] = useState('images');
-  const [selectedMedia, setSelectedMedia] = useState(null);
-
-  // Helper to get items
-  const currentItems = galleryData[activeCampaign] || {};
-  const mediaList = currentItems[activeMediaType.toLowerCase()] || [];
-  
-
   return (
-    <div className="bg-foreground min-h-screen">
-     <section className='relative w-full bg-black flex flex-col items-center pt-20 pb-32 overflow-hidden px-10 min-h-screen py-10'>
-      {/* Background Overlay */}
-      <div className="absolute inset-0 bg-linear-to-b from-gray-900/40 to-black pointer-events-none" />
+    <div className="bg-white min-h-screen">
+      {/* 1. Hero Section with Floating Polaroid Cards */}
+      <GalleryHero />
 
+<<<<<<< HEAD
       {/* 1. Header - Tightened margin to 'hug' the images */}
       <div className='flex flex-col gap-4 justify-center items-center z-40 relative mb-4 px-4'>
         <button className='text-[10px] text-white border border-gray-600 rounded-full py-1.5 px-5 bg-white/5 uppercase tracking-[0.2em]'>
@@ -246,6 +242,10 @@ export default function GalleryContent() {
         </div>
       )}
     </section>
+=======
+      {/* 2. Main Media Content (Folders, Filters, and Media Viewer) */}
+      <GallerySection />
+>>>>>>> fb6a59bae8e5114bcd577f5501d4aa4de9705e25
     </div>
   );
-};
+}

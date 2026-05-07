@@ -9,7 +9,7 @@ export const metadata = {
 const Gallery = () => {
 
   return (
-    <main className='relative w-full min-h-screen bg-gray-900 pt-24 overflow-x-hidden'>
+    <main>
       <GalleryContent />
     </main>
   )
