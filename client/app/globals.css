@@ -70,6 +70,9 @@
   --color-blue-700: #011980;
   --color-blue-800: #011363;
   --color-blue-900: #000f4c;
+
+  /* Error Red */
+  --color-error-600: #d92d20;
 }
 
 body {
@@ -83,7 +86,6 @@ body {
 .section {
   @apply py-8 px-4 md:py-16 md:px-8;
 }
-
 
 /* Typography Scale */
 h1,
