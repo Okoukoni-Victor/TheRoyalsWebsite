@@ -1,6 +1,6 @@
 import IntroSection from "@/components/contactPage/intro/IntroSection";
 import ContactSection from "@/components/contactPage/contact/ContactSection";
-import NewsletterSection from "@/components/contactPage/newsletter/NewsletterSection";
+import NewsletterSection from "@/components/ui/NewsletterSection";
 
 export const metadata = {
   title: "Contact",
@@ -13,7 +13,7 @@ export default function ContactPage() {
     <main>
       <IntroSection />
       <ContactSection />
-      <NewsletterSection />
+      <NewsletterSection bgVariant="blue" />
     </main>
   );
 }

@@ -18,7 +18,7 @@ const images = [
   {
     src: "/assets/u2k-moment-1.jpg",
     alt: "Urgent 2K Distribution",
-    className: "col-span-2 h-[400px] md:h-[600px]"
+    className: "col-span-2 max-w-3xl mx-auto w-full h-[400px] md:h-[600px]"
   },
   {
     src: "/assets/cabi-moment-3.jpg",

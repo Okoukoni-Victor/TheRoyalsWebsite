@@ -16,6 +16,7 @@ import {
   ListboxOptions,
 } from "@headlessui/react";
 import { ChevronDown } from "lucide-react";
+import { sendContactEmail } from "@/app/actions";
 
 const enquiryTypes = [
   {
@@ -122,10 +123,21 @@ export default function ContactForm() {
     setIsSubmitting(true);
 
     try {
-      // Replace this with the actual form submission logic
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setFormState(FORM_STATE.SUCCESS);
-    } catch {
+      const result = await sendContactEmail({
+        fullName,
+        email,
+        phone,
+        enquiryType: enquiryType.label,
+        message,
+      });
+
+      if (result.success) {
+        setFormState(FORM_STATE.SUCCESS);
+      } else {
+        setFormState(FORM_STATE.ERROR);
+      }
+    } catch (error) {
+      console.error("Submission Error:", error);
       setFormState(FORM_STATE.ERROR);
     } finally {
       setIsSubmitting(false);

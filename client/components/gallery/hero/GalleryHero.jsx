@@ -31,7 +31,7 @@ export default function GalleryHero() {
 
       {/* Hero Footer */}
       <div className="relative z-10">
-        <p className="text-white/80 max-w-md">
+        <p className="text-white max-w-md">
           A glimpse into the lives we&apos;ve touched, the communities we serve, and the meaningful impact we continue to create through our initiatives.
         </p>
       </div>

@@ -4,7 +4,7 @@ import HowItWorksSection from "@/components/CABIPage/howItWorks/HowItWorksSectio
 import JoinMovementSection from "@/components/CABIPage/joinMovement/JoinMovementSection";
 import PartnersSection from "@/components/CABIPage/partners/PartnersSection";
 import MomentsOfImpactSection from "@/components/CABIPage/momentsOfImpact/MomentsOfImpactSection";
-import NewsletterSection from "@/components/CABIPage/newsletter/NewsletterSection";
+import NewsletterSection from "@/components/ui/NewsletterSection";
 
 export const metadata = {
   title: "Clothe A BoyChild Initiative | The Royals",
@@ -21,7 +21,7 @@ export default function CABIPage() {
       <JoinMovementSection />
       <PartnersSection />
       <MomentsOfImpactSection />
-      <NewsletterSection />
+      <NewsletterSection bgVariant="purple" />
     </main>
   );
 }

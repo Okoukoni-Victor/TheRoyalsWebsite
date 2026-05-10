@@ -28,7 +28,7 @@ export default function Footer() {
                     className='object-contain brightness-0 invert'
                     />
                   </div>
-                <p className='text-gray-400 text-sm leading-relaxed max-w-[280px]'>
+                <p className=' text-sm leading-relaxed max-w-[280px]'>
                     Empowering Communities through  education, mentoring,
                     and sustainable development initiatives
                 </p>
@@ -41,7 +41,7 @@ export default function Footer() {
                     <h5 className=' mb-6'>
                         Quick Links
                     </h5>
-                    <ul className='space-y-3 text-gray-400'>
+                    <ul className='space-y-3'>
                         <li><Link href='/' className='hover:text-blue-500 transition'>Home</Link></li>
                         <li><Link href='/about' className=' hover:text-blue-500 transition'>About Us</Link></li>
                         <li><Link href='/gallery' className=' hover:text-blue-500 transition'>Gallery</Link></li>
@@ -54,7 +54,7 @@ export default function Footer() {
                 {/* Initiatives */}
                 <div className='flex flex-col'>
                     <h5 className='mb-6'>Our initiatives</h5>
-                    <ul className='space-y-4 text-gray-400'>
+                    <ul className='space-y-4 '>
                         <li>Clothe A BoyChild Initiative (CABI)</li>
                         <li>Urgent 2K Campaign</li>
                     </ul>
@@ -63,14 +63,26 @@ export default function Footer() {
                 {/* Contact channels*/}
                 <div className='flex flex-col'>
                     <h5 className='mb-6'>
-                        Get Intouch.
+                        Get in Touch.
                     </h5>
                     <ul>
-                        <li className='flex items-center gap-4 mt-1 text-gray-400'><FaEnvelope className='text-white' /><span>hellothe royals@gmail.com</span></li>
-                        <li className='flex items-center gap-3 mt-1 text-gray-400'><FaPhone className='text-white' /><span className='text-sm'>+2347010990908</span></li>
-                        <li className='flex items-center gap-3 mt-1 text-gray-400'><FaWhatsapp className='text-white' /><span className='text-sm'>+2348166527163</span></li>
-                        <li className='flex items-center gap-3 mt-1 text-gray-400'><FaMapMarkerAlt className='text-white mb-5' /><span className='text-sm'>19, Olanrewaju Street, Off <br />
-                            Orile Road, Tabon-Tabon, <br /> Agege, Lagos, Nigeria</span></li>
+                        <li className='flex items-center gap-4 mt-1'>
+                            <FaEnvelope className='text-white' />
+                            <a href="mailto:hello.theroyals@gmail.com" className="hover:text-blue-500 transition">hello.theroyals@gmail.com</a>
+                        </li>
+                        <li className='flex items-center gap-3 mt-1'>
+                            <FaPhone className='text-white' />
+                            <a href="tel:+2347010990908" className='text-sm hover:text-blue-500 transition'>+234 701 099 0908</a>
+                        </li>
+                        <li className='flex items-center gap-3 mt-1'>
+                            <FaWhatsapp className='text-white' />
+                            <a href="https://wa.me/2348166527163" target="_blank" rel="noopener noreferrer" className='text-sm hover:text-blue-500 transition'>+234 816 652 7163</a>
+                        </li>
+                        <li className='flex items-center gap-3 mt-1'>
+                            <FaMapMarkerAlt className='text-white mb-5' />
+                            <span className='text-sm'>19, Olanrewaju Street, Off <br />
+                            Orile Road, Tabon-Tabon, <br /> Agege, Lagos, Nigeria</span>
+                        </li>
                     </ul>
                     {/* Horizontal Icons */}
                     <div className='flex flex-row justify-start mt-5 gap-3.5'>
@@ -91,7 +103,7 @@ export default function Footer() {
                 
             </div>
                 {/* Copy rights */}
-                <p className='text-gray-500 text-sm text-center'>@ {currentYear} The Royals. All rights reserved</p>
+                <p className='text-sm text-center'>@ {currentYear} The Royals. All rights reserved</p>
                 <div className='w-full flex justify-start mt-10'>
                 {/* Colorful shapes at the footer bottom  */}
 

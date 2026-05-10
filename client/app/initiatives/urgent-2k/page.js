@@ -4,7 +4,7 @@ import HowItWorksSection from "@/components/urgent2kPage/howItWorks/HowItWorksSe
 import JoinMovementSection from "@/components/urgent2kPage/joinMovement/JoinMovementSection";
 import PartnersSection from "@/components/urgent2kPage/partners/PartnersSection";
 import MomentsOfImpactSection from "@/components/urgent2kPage/momentsOfImpact/MomentsOfImpactSection";
-import NewsletterSection from "@/components/urgent2kPage/newsletter/NewsletterSection";
+import NewsletterSection from "@/components/ui/NewsletterSection";
 
 export const metadata = {
   title: "Urgent 2K Campaign | The Royals",
@@ -21,7 +21,7 @@ export default function Urgent2KPage() {
       <JoinMovementSection />
       <PartnersSection />
       <MomentsOfImpactSection />
-      <NewsletterSection />
+      <NewsletterSection bgVariant="urgent" />
     </main>
   );
 }

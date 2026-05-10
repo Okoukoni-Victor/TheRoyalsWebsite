@@ -4,7 +4,7 @@ import WorkSection from "../components/landingPage/work/WorkSection";
 import StatsSection from "../components/landingPage/stats/StatsSection";
 import PartnersSection from "../components/landingPage/partners/PartnersSection";
 import MomentOfImpact from "../components/landingPage/moment/MomentOfImpact";
-import NewsletterSection from "../components/landingPage/newsletter/NewsletterSection";
+import NewsletterSection from "@/components/ui/NewsletterSection";
 
 export const metadata = {
   title: "Home",
@@ -21,7 +21,7 @@ export default function Home() {
       <StatsSection />
       <PartnersSection />
       <MomentOfImpact />
-      <NewsletterSection />
+      <NewsletterSection bgVariant="blue" />
     </main>
   );
 }

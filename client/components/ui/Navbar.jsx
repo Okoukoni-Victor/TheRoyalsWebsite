@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -65,14 +65,25 @@ export default function Navbar() {
     }
   }, [isMobileMenuOpen]);
 
+  const tl = useRef(null);
+
   useGSAP(() => {
+    tl.current = gsap.timeline({ paused: true })
+      .to('.mobile-menu', { x: 0, opacity: 1, visibility: 'visible', duration: 0.5, ease: 'power3.out' })
+      .fromTo('.mobile-nav-item', 
+        { x: 20, opacity: 0 }, 
+        { x: 0, opacity: 1, stagger: 0.05, duration: 0.4, ease: 'power2.out' }, 
+        "-=0.3"
+      );
+  }, []);
+
+  useEffect(() => {
     if (isMobileMenuOpen) {
-      gsap.to('.mobile-menu', { x: 0, opacity: 1, visibility: 'visible', duration: 0.5, ease: 'power3.out' });
-      gsap.from('.mobile-nav-item', { x: 20, opacity: 0, stagger: 0.05, duration: 0.4, delay: 0.1, ease: 'power2.out' });
+      tl.current?.play();
     } else {
-      gsap.to('.mobile-menu', { x: '100%', opacity: 0, visibility: 'hidden', duration: 0.4, ease: 'power3.in' });
+      tl.current?.reverse();
     }
-  }, { dependencies: [isMobileMenuOpen] });
+  }, [isMobileMenuOpen]);
 
   return (
     <>
@@ -170,7 +181,7 @@ export default function Navbar() {
           <div className="hidden lg:block">
             <Button 
               label="Get Involved" 
-              href="/get-involved" 
+              href="/contact" 
               variant="primary"
             />
           </div>
@@ -266,7 +277,7 @@ export default function Navbar() {
 
           <Button 
             label="Get Involved" 
-            href="/get-involved" 
+            href="/contact" 
             variant="primary"
             className="w-full"
             onClick={() => setIsMobileMenuOpen(false)}
