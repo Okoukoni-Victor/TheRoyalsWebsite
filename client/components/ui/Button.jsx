@@ -6,13 +6,13 @@ export default function Button({
   label,
   href,
   variant = "primary",
-  icon = "lucide:arrow-right",
+  icon = "tabler:arrow-right",
   className = "",
   onClick,
   ...props
 }) {
   const baseStyles =
-    "inline-flex items-center justify-between gap-4 rounded-full transition-all duration-300 active:scale-[0.98] group";
+    "inline-flex items-center justify-between gap-8 rounded-full transition-all duration-300 active:scale-[0.98] group";
 
   const variants = {
     primary: "bg-blue-300 hover:bg-blue-400 text-white pl-8 pr-2 py-2 ",
@@ -34,9 +34,9 @@ export default function Button({
     <>
       <span className="">{label}</span>
       <div
-        className={`${iconCircleVariants[variant]} w-11 h-11 rounded-full flex items-center justify-center transition-transform`}
+        className={`${iconCircleVariants[variant]} w-8 h-8 rounded-full flex items-center justify-center transition-transform`}
       >
-        <Icon icon={icon} width="22" className="text-white" />
+        <Icon icon={icon} width="18" className="text-white" />
       </div>
     </>
   );

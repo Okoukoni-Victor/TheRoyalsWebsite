@@ -74,7 +74,7 @@ export default function GalleryCarousel({
         className="swiper-prev-btn-custom absolute left-1 top-1/2 -translate-y-1/2 z-30 outline-none transition-all duration-300 [&.swiper-button-disabled]:opacity-30 [&.swiper-button-disabled]:cursor-not-allowed"
       >
         <div className="w-12 h-12 rounded-full flex items-center justify-center text-white">
-          <Icon icon="lucide:chevron-left" width={24} />
+          <Icon icon="tabler:chevron-left" width={24} />
         </div>
       </button>
       
@@ -82,7 +82,7 @@ export default function GalleryCarousel({
         className="swiper-next-btn-custom absolute right-1 top-1/2 -translate-y-1/2 z-30 outline-none transition-all duration-300 [&.swiper-button-disabled]:opacity-30 [&.swiper-button-disabled]:cursor-not-allowed"
       >
         <div className="w-12 h-12 flex items-center justify-center rounded-full text-white">
-          <Icon icon="lucide:chevron-right" width={24} />
+          <Icon icon="tabler:chevron-right" width={24} />
         </div>
       </button>
     </div>

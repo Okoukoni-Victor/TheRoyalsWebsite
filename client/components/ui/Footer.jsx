@@ -1,13 +1,12 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaLinkedin, FaWhatsapp, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt, FaYoutube } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { Icon } from "@iconify/react";
 export default function Footer() {
     const currentYear = new Date().getFullYear();
     
     return(
-        <footer className='pt-8 md:pt-16 pb-4 px-4 md:px-8 bg-black text-white'>
+        <footer className='pt-8 md:pt-16 pb-4 px-4 md:px-8 bg-grey-900 text-white'>
             <div className='flex justify-end mb-24 max-w-7xl mx-auto'>
                  <h1 className='text-6xl md:text-8xl font-medium flex items-baseline gap-2'>
                       Get Involved
@@ -67,19 +66,19 @@ export default function Footer() {
                     </h5>
                     <ul>
                         <li className='flex items-center gap-4 mt-1'>
-                            <FaEnvelope className='text-white' />
+                            <Icon icon="solar:letter-bold" className='text-white' width="18" />
                             <a href="mailto:hello.theroyals@gmail.com" className="hover:text-blue-500 transition">hello.theroyals@gmail.com</a>
                         </li>
                         <li className='flex items-center gap-3 mt-1'>
-                            <FaPhone className='text-white' />
+                            <Icon icon="solar:phone-bold" className='text-white' width="18" />
                             <a href="tel:+2347010990908" className='text-sm hover:text-blue-500 transition'>+234 701 099 0908</a>
                         </li>
                         <li className='flex items-center gap-3 mt-1'>
-                            <FaWhatsapp className='text-white' />
+                            <Icon icon="tabler:brand-whatsapp" className='text-white' width="18" />
                             <a href="https://wa.me/2348166527163" target="_blank" rel="noopener noreferrer" className='text-sm hover:text-blue-500 transition'>+234 816 652 7163</a>
                         </li>
                         <li className='flex items-center gap-3 mt-1'>
-                            <FaMapMarkerAlt className='text-white mb-5' />
+                            <Icon icon="solar:map-point-bold" className='text-white mb-5' width="18" />
                             <span className='text-sm'>19, Olanrewaju Street, Off <br />
                             Orile Road, Tabon-Tabon, <br /> Agege, Lagos, Nigeria</span>
                         </li>
@@ -87,16 +86,16 @@ export default function Footer() {
                     {/* Horizontal Icons */}
                     <div className='flex flex-row justify-start mt-5 gap-3.5'>
                         <Link href="#" className="hover:text-blue-500 transition">
-                        <FaYoutube size={20} /> 
+                          <Icon icon="tabler:brand-youtube" width="22" /> 
                         </Link> 
                         <Link href="#" className="hover:text-blue-500 transition">
-                        <FaLinkedin size={20} /> 
+                          <Icon icon="tabler:brand-linkedin" width="22" /> 
                         </Link>
                         <Link href="#" className="hover:text-blue-500 transition">
-                        <FaXTwitter size={20} /> 
+                          <Icon icon="tabler:brand-x" width="22" /> 
                         </Link>
                         <Link href="#" className="hover:text-blue-500 transition">
-                        <FaInstagram size={20} /> 
+                          <Icon icon="tabler:brand-instagram" width="22" /> 
                         </Link>
                     </div>
                 </div>

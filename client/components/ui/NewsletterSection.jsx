@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Loader2, CheckCircle2 } from "lucide-react";
+import { Icon } from "@iconify/react";
 import { subscribeToNewsletter } from "@/app/actions";
 
 export default function NewsletterSection({ bgVariant = "blue" }) {
@@ -54,14 +54,14 @@ export default function NewsletterSection({ bgVariant = "blue" }) {
   };
 
   return (
-    <section className="section !py-0 md:!py-6 lg:!py-[1.5rem] !px-0 md:!px-3 lg:!px-[3rem] bg-white">
+    <section className="section bg-white">
       <div className={`flex flex-col gap-[44.2px] px-[23.4px] py-[74px] md:rounded-[26px] ${bgClasses[bgVariant] || bgClasses.blue}`}>
         <div className="flex flex-col items-center gap-[19px]">
-          <h2 className="!leading-[120%] !tracking-[-5%] text-center !text-[41px] md:!text-[51px] !font-black text-white">
+          <h2 className="leading-[120%] tracking-[-5%] text-center text-[41px] md:text-[51px] font-black text-white">
             Stay Connected
           </h2>
 
-          <p className="max-w-[413px] !leading-[150%] !tracking-[0.2%] text-center !text-[15px] text-grey-50">
+          <p className="max-w-[413px] leading-[150%] tracking-[0.2%] text-center text-[15px] text-grey-50">
             {status === "success" 
               ? "Thank you for subscribing! Check your inbox for a welcome message."
               : "Subscribe to our newsletter for updates on our programs, impact stories, and how you can get involved."}
@@ -70,7 +70,7 @@ export default function NewsletterSection({ bgVariant = "blue" }) {
 
         {status === "success" ? (
           <div className="flex flex-col items-center gap-4 py-8">
-            <CheckCircle2 className="w-16 h-16 text-white animate-in zoom-in duration-300" />
+            <Icon icon="tabler:circle-check" className="w-16 h-16 text-white animate-in zoom-in duration-300" />
             <button 
               onClick={() => setStatus("idle")}
               className="text-white underline text-sm opacity-80 hover:opacity-100 transition-opacity"
@@ -88,7 +88,7 @@ export default function NewsletterSection({ bgVariant = "blue" }) {
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
                   placeholder="Full Name"
-                  className="w-full md:max-w-[581.1px] lg:max-w-[771px] outline-none rounded-[7.8px] p-[13px] !leading-[150%] !tracking-[0.2%] !text-[15px] text-gray-900 placeholder:text-grey-50 bg-white/10 border border-white/5 focus:bg-white/20 transition-all duration-300"
+                  className="w-full md:max-w-[581.1px] lg:max-w-[771px] outline-none rounded-[7.8px] p-[13px] leading-[150%] tracking-[0.2%] text-[15px] text-grey-900 placeholder:text-grey-900 bg-white/10 border border-white/5 focus:bg-white/20 transition-all duration-300"
                 />
 
                 <input
@@ -97,7 +97,7 @@ export default function NewsletterSection({ bgVariant = "blue" }) {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Email Address"
-                  className="w-full md:max-w-[581.1px] lg:max-w-[771px] outline-none rounded-[7.8px] p-[13px] !leading-[150%] !tracking-[0.2%] !text-[15px] text-gray-900 placeholder:text-grey-50 bg-white/10 border border-white/5 focus:bg-white/20 transition-all duration-300"
+                  className="w-full md:max-w-[581.1px] lg:max-w-[771px] outline-none rounded-[7.8px] p-[13px] leading-[150%] tracking-[0.2%] text-[15px] text-grey-900 placeholder:text-grey-900 bg-white/10 border border-white/5 focus:bg-white/20 transition-all duration-300"
                 />
               </div>
 
@@ -130,7 +130,7 @@ export default function NewsletterSection({ bgVariant = "blue" }) {
 
                 <label
                   htmlFor="privacy-policy"
-                  className="!leading-[150%] !tracking-[0.2%] !text-[13px] md:!text-[15px] text-grey-50"
+                  className="leading-[150%] tracking-[0.2%] text-[13px] md:text-[15px] text-grey-50"
                 >
                   I have read the{" "}
                   <Link
@@ -151,17 +151,17 @@ export default function NewsletterSection({ bgVariant = "blue" }) {
             <button
               type="submit"
               disabled={isSubmitting || !consent}
-              className="cursor-pointer bg-white disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center gap-[45px] w-fit py-[9px] ps-[25px] pe-[10px] rounded-full bg-white group transition-all duration-300"
+              className="cursor-pointer bg-white disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center gap-[45px] w-fit py-[9px] ps-[25px] pe-[10px] rounded-full group transition-all duration-300"
             >
-              <span className={`!leading-[150%] !tracking-[0.2%] !text-[15px] ${buttonTextClasses[bgVariant] || buttonTextClasses.blue}`}>
+              <span className={`leading-[150%] tracking-[0.2%] text-[15px] ${buttonTextClasses[bgVariant] || buttonTextClasses.blue}`}>
                 {isSubmitting ? "Subscribing..." : "Subscribe Now"}
               </span>
 
               <span className={`p-[8.85px] rounded-full ${buttonIconBgClasses[bgVariant] || buttonIconBgClasses.blue} group-hover:opacity-80 transition-opacity`}>
                 {isSubmitting ? (
-                  <Loader2 className="w-[19.3px] h-[19.3px] text-white animate-spin" />
+                  <Icon icon="tabler:loader-2" className="w-[19.3px] h-[19.3px] text-white animate-spin" />
                 ) : (
-                  <ArrowRight className="w-[19.3px] h-[19.3px] text-white" />
+                  <Icon icon="tabler:arrow-right" className="w-[19.3px] h-[19.3px] text-white" />
                 )}
               </span>
             </button>

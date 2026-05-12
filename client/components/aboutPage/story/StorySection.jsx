@@ -5,7 +5,7 @@ import TextReveal from "../../ui/TextReveal";
 const cards = [
 // ... (omitted cards for brevity)
   {
-    icon: "lucide:target",
+    icon: "solar:target-bold",
     title: "Mission",
     description:
       "To reach underserved children and create opportunities that improve their lives and future outcomes.",
@@ -14,7 +14,7 @@ const cards = [
     patternClassName: "translate-x-4 -translate-y-4",
   },
   {
-    icon: "lucide:heart",
+    icon: "solar:heart-bold",
     title: "Vision",
     description:
       "To redefine the standard of living for children across Africa by expanding access to opportunities that unlock their untapped potential.",
@@ -24,7 +24,7 @@ const cards = [
     patternClassName: "translate-x-2 -translate-y-2",
   },
   {
-    icon: "lucide:users",
+    icon: "solar:users-group-rounded-bold",
     title: "Focus",
     description:
       "Supporting access to education, empowering young minds, equipping the boy child, reducing inequality, and building pathways for lasting impact.",

@@ -97,7 +97,7 @@ export default function CurvedMarquee() {
               </div>
               
               {/* Image Container */}
-              <div className="relative w-full h-full rounded-3xl overflow-hidden bg-gray-100">
+              <div className="relative w-full h-full rounded-3xl overflow-hidden bg-grey-100">
                 <Image
                   src={src}
                   alt={`Impact story ${i + 1}`}

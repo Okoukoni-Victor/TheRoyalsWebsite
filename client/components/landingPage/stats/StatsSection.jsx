@@ -4,7 +4,7 @@ export default function StatsSection() {
   const stats = [
     {
       number: "1250",
-      description: "lives Impacte"
+      description: "lives Impacted"
     },
     {
       number: "7",
@@ -38,10 +38,10 @@ export default function StatsSection() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-16">
               {stats.map((stat, index) => (
                 <div key={index} className="space-y-4 group">
-                  <h4 className="text-white">
+                  <h3 className="text-white font-black">
                     {stat.number}
-                  </h4>
-                  <div className="space-y-2">
+                  </h3>
+                  <div className="space-y-2 font-bold text-xl">
                     <p className="">{stat.description}</p>
                   </div>
                 </div>

@@ -6,7 +6,7 @@ import HeroBackground from "../../ui/HeroBackground";
 
 export default function GalleryHero() {
   return (
-    <section className="section relative w-full bg-foreground overflow-hidden min-h-screen flex flex-col justify-between pt-24 md:pt-32 pb-16 md:pb-20">
+    <section className="section relative w-full  bg-grey-900 overflow-hidden min-h-screen flex flex-col justify-between pt-24 md:pt-32 pb-16 md:pb-20">
       {/* Reusable Background */}
       <HeroBackground />
 

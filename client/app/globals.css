@@ -95,19 +95,19 @@ h4,
 h5,
 h6 {
   font-family: var(--font-helixa);
-  font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.02em;
 }
 
 h1 {
-  font-size: clamp(2.75rem, 5vw + 1.5rem, 5.25rem); /* 44px → 84px */
+  @apply  text-[3.188rem] md:text-[5.25rem] font-black md:font-bold;
   line-height: 1.05;
   letter-spacing: -0.03em;
+  
 }
 
 h2 {
-  font-size: clamp(2.125rem, 4vw + 1rem, 4rem); /* 34px → 64px */
+  @apply font-black text-[2.563rem] md:text-[3.188rem]
 }
 
 h3 {
@@ -115,7 +115,7 @@ h3 {
 }
 
 h4 {
-  font-size: clamp(1.375rem, 2vw + 0.5rem, 2.25rem); /* 22px → 36px */
+  @apply text-[1.5rem] 
 }
 
 h5 {
@@ -127,7 +127,7 @@ h6 {
 }
 
 p {
-  font-size: clamp(0.9375rem, 0.5vw + 0.75rem, 1.125rem); /* 15px → 18px */
+  @apply text-[0.938rem];
   line-height: 1.6;
   letter-spacing: -0.01em;
 }

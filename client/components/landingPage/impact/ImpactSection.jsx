@@ -14,7 +14,7 @@ export default function ImpactSection() {
       title: "Urgent 2K Campaign",
       description: "A rapid response fundraising campaign to address immediate community needs, from medical emergencies to educational support, one contribution at a time.",
       bgColor: "bg-green-100",
-      patternSvg: "/patterns/rainbow.svg"
+      patternSvg: "/assets/rainbow.svg"
     }
   ];
 

@@ -18,7 +18,7 @@ export default function HeroBackground({ className = "" }) {
       </div>
 
       {/* Subtle Glow/Blur Element */}
-      <div className="absolute bottom-0 left-0 opacity-40 w-96 h-96 bg-blue-50 rounded-tr-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 opacity-40 w-72 h-72 bg-blue-50 rounded-tr-full blur-3xl" />
       
       {/* Additional ambient gradients
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-blue-900/20" />

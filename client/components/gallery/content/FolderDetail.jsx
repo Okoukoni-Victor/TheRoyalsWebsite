@@ -37,7 +37,7 @@ export default function FolderDetail({
         className="flex items-center font-semibold gap-3 text-grey-500 hover:text-blue-300 transition-colors mb-6 group text-sm"
       >
         <div className="flex items-center justify-center">
-          <Icon icon="lucide:chevron-left" width="24" className="group-hover:-translate-x-1 transition-transform" />
+          <Icon icon="tabler:chevron-left" width="24" className="group-hover:-translate-x-1 transition-transform" />
         </div>
         <span>Back to folder</span>
       </button>
@@ -49,7 +49,7 @@ export default function FolderDetail({
             {folder.title}
           </h5>
           <div className="flex items-center gap-2 text-grey-500">
-            <Icon icon="lucide:map-pin" width="18" />
+            <Icon icon="solar:map-point-bold" width="18" />
             <p className="">{folder.location}</p>
           </div>
         </div>
@@ -75,13 +75,13 @@ export default function FolderDetail({
                   onClick={handlePrev}
                   className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-black/40 text-white flex items-center justify-center backdrop-blur-sm pointer-events-auto hover:bg-black/60 transition-colors"
                 >
-                  <Icon icon="lucide:chevron-left" width="24" />
+                  <Icon icon="tabler:chevron-left" width="24" />
                 </button>
                 <button 
                   onClick={handleNext}
                   className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-black/40 text-white flex items-center justify-center backdrop-blur-sm pointer-events-auto hover:bg-black/60 transition-colors"
                 >
-                  <Icon icon="lucide:chevron-right" width="24" />
+                  <Icon icon="tabler:chevron-right" width="24" />
                 </button>
               </div>
             </>
