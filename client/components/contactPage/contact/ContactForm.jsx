@@ -75,8 +75,10 @@ export default function ContactForm() {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [enquiryType, setEnquiryType] = useState(null);
-  const [message, setMessage] = useState("");
+  const [enquiryType, setEnquiryType] = useState(enquiryTypes[0]);
+  const [message, setMessage] = useState(
+    enquiryTypes[0].defaultMessage.join("\n\n"),
+  );
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Check if all required fields are filled
@@ -317,10 +319,8 @@ export default function ContactForm() {
                   <ListboxButton className="flex justify-between items-center w-full h-[50px] rounded-[8px] border border-grey-100 px-[20px] bg-white">
                     {({ open }) => (
                       <>
-                        <span
-                          className={`!leading-[140%] !text-[16px] ${enquiryType ? "text-grey-400" : "text-grey-200 opacity-50"}`}
-                        >
-                          {enquiryType?.label || "Select enquiry type"}
+                        <span className="!leading-[140%] !text-[16px] text-grey-400">
+                          {enquiryType.label}
                         </span>
 
                         <ChevronDown

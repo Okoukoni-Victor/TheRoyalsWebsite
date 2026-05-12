@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function MomentsOfImpactSection() {
   return (
-    <section className="section !pb-0 !px-0 lg:px-[3rem] bg-white">
+    <section className="section !px-0 lg:px-[3rem] bg-white">
       <div className="flex flex-col gap-[50px] max-w-7xl mx-auto">
         <div className="flex flex-col items-center gap-[19px]">
           <h2 className="!leading-[120%] !tracking-[-5%] text-center !text-[41px] md:!text-[51px] !font-black text-grey-900">
