@@ -42,7 +42,7 @@ export default function PartnersSection() {
         <div className="flex justify-center">
           <Button 
             label="Support Our Mission" 
-            href="/support" 
+            href="/contact" 
             variant="primary"
           />
         </div>

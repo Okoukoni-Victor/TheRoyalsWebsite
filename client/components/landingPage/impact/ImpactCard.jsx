@@ -6,7 +6,8 @@ export default function ImpactCard({
   title, 
   description, 
   bgColor, 
-  patternSvg 
+  patternSvg,
+  href 
 }) {
   return (
     <div className={`relative w-full flex-1 ${bgColor} max-w-[500px] rounded-2xl p-8 flex flex-col min-h-[400px] overflow-hidden`}>
@@ -35,6 +36,7 @@ export default function ImpactCard({
             label="Learn More" 
             variant="secondary"
             className="text-base"
+            href={href}
           />
         </div>
       </div>

@@ -7,14 +7,16 @@ export default function ImpactSection() {
       title: "Clothe A BoyChild Initiative (CABI)",
       description: "Providing school uniforms, materials, and support to underprivileged boys to ensure they have equal access to education without the barrier of inadequate resources.",
       bgColor: "bg-purple-100",
-      patternSvg: "/patterns/crown.svg"
+      patternSvg: "/patterns/crown.svg",
+      href: "/initiatives/cabi"
     },
     {
       tagSvg: "/patterns/community-support.svg",
       title: "Urgent 2K Campaign",
       description: "A rapid response fundraising campaign to address immediate community needs, from medical emergencies to educational support, one contribution at a time.",
       bgColor: "bg-green-100",
-      patternSvg: "/assets/rainbow.svg"
+      patternSvg: "/assets/rainbow.svg",
+      href: "/initiatives/urgent-2k"
     }
   ];
 
