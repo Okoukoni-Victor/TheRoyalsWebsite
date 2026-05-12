@@ -17,6 +17,8 @@ import {
 } from "@headlessui/react";
 import { ChevronDown } from "lucide-react";
 import { sendContactEmail } from "@/app/actions";
+import { useSearchParams } from "next/navigation";
+import { useEffect, Suspense } from "react";
 
 const enquiryTypes = [
   {
@@ -69,6 +71,17 @@ const FORM_STATE = {
 };
 
 export default function ContactForm() {
+  return (
+    <Suspense fallback={<div>Loading form...</div>}>
+      <ContactFormContent />
+    </Suspense>
+  );
+}
+
+function ContactFormContent() {
+  const searchParams = useSearchParams();
+  const typeParam = searchParams.get("type");
+
   const [formState, setFormState] = useState(FORM_STATE.IDLE);
   const [pendingType, setPendingType] = useState(null);
   const [showConfirmModal, setShowConfirmModal] = useState(false);
@@ -79,6 +92,19 @@ export default function ContactForm() {
   const [message, setMessage] = useState(
     enquiryTypes[0].defaultMessage.join("\n\n"),
   );
+
+  useEffect(() => {
+    if (typeParam) {
+      const selectedType = enquiryTypes.find(
+        (t) => t.label.toLowerCase().includes(typeParam.toLowerCase())
+      );
+      if (selectedType) {
+        setEnquiryType(selectedType);
+        setMessage(selectedType.defaultMessage.join("\n\n"));
+      }
+    }
+  }, [typeParam]);
+
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Check if all required fields are filled

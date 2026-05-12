@@ -26,6 +26,7 @@ const cards = [
     title: "Sponsor a Student",
     description:
       "Provide clothing and learning support to help a boy stay confident and in school.",
+    type: "sponsorship",
   },
   {
     icon: (
@@ -48,6 +49,7 @@ const cards = [
     title: "Suggest",
     description:
       "Know a boy in need? Share a case and help us extend support where it matters.",
+    type: "proposal",
   },
   {
     icon: (
@@ -72,6 +74,7 @@ const cards = [
     title: "Partner With Us",
     description:
       "Work with us to expand support and empower more boys through shared impact.",
+    type: "partnership",
   },
   {
     icon: (
@@ -94,6 +97,7 @@ const cards = [
     title: "Volunteer",
     description:
       "Offer your time and skills to support boys and strengthen community programs.",
+    type: "volunteer",
   },
 ];
 
@@ -147,16 +151,16 @@ export default function JoinMovementSection() {
                     {card.title}
                   </h3>
 
-                  <p className="!leading-[150%] !tracking-[0.2%] !text-[15px] text-grey-400">
+                  <p className="leading-[150%] tracking-[0.2%] !text-[15px] text-grey-400">
                     {card.description}
                   </p>
                 </div>
 
                 <Link
-                  href="/contact"
+                  href={`/contact?type=${card.type}`}
                   className="z-1 inline-flex items-center gap-[45px] w-fit py-[9px] ps-[25px] pe-[10px] rounded-full bg-white"
                 >
-                  <span className="!leading-[150%] !tracking-[0.2%] !text-[15px] text-grey-800">
+                  <span className="leading-[150%] tracking-[0.2%] text-[15px] text-grey-800">
                     Get Involved
                   </span>
 

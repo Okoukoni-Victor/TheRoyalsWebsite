@@ -15,13 +15,15 @@ export default function WorkCard({
       className={`relative ${bgColor} rounded-2xl p-8 lg:p-10 flex flex-col min-h-[350px] overflow-hidden group`}
     >
       {/* Icon Badge - Octagon Shape */}
-      <div className="">
-        <div 
-        className="relative  z-10 w-12 h-12 bg-white shadow-sm mb-16 flex items-center justify-center"
-        style={{ clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)" }}
-      >
-        {icon && <Icon icon={icon} className="w-6 h-6 text-grey-900" />}
-      </div>
+      <div className="relative z-10 w-12 h-12 mb-16 flex items-center justify-center">
+        <Image
+          src="/assets/octagon.svg"
+          alt=""
+          aria-hidden="true"
+          fill
+          className="object-contain"
+        />
+        {icon && <Icon icon={icon} className="relative z-1 w-6 h-6 text-grey-900" />}
       </div>
 
       {/* Content */}

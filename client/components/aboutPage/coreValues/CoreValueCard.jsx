@@ -6,30 +6,34 @@ export default function CoreValueCard({
   title,
   description,
   bgColor,
-  textColor = "text-grey-700",
+  textColor = "text-grey-900",
   patternSvg,
 }) {
   return (
     <div
-      className={`relative ${bgColor} rounded-2xl p-8 lg:p-10 flex flex-col min-h-[420px] overflow-hidden group`}
+      className={`relative ${bgColor} rounded-2xl p-8 lg:p-10 flex flex-col min-h-[350px] overflow-hidden group`}
     >
       {/* Icon Badge - Octagon Shape */}
-      <div 
-        className="relative z-10 w-14 h-14 bg-white shadow-sm mb-6 self-end flex items-center justify-center"
-        style={{ clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)" }}
-      >
-        {icon && <Icon icon={icon} className="w-7 h-7 text-grey-900" />}
+      <div className="relative z-10 w-12 h-12 mb-16 flex items-center justify-center">
+        <Image
+          src="/assets/octagon.svg"
+          alt=""
+          aria-hidden="true"
+          fill
+          className="object-contain"
+        />
+        {icon && <Icon icon={icon} className="relative z-1 w-6 h-6 text-grey-900" />}
       </div>
 
       {/* Content */}
-      <div className={`relative z-10 ${textColor}`}>
+      <div className={`relative z-10 mt-auto ${textColor}`}>
         <h4 className="mb-4">{title}</h4>
         <p className="">{description}</p>
       </div>
 
       {/* Background Pattern */}
       {patternSvg && (
-        <div className="absolute bottom-0 right-0 pointer-events-none opacity-40 group-hover:opacity-60 transition-opacity duration-500">
+        <div className="absolute top-0 right-0 pointer-events-none">
           <Image
             src={patternSvg}
             alt={title}
