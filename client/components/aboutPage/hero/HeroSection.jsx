@@ -14,7 +14,7 @@ export default function HeroSection() {
 
         <div className="relative overflow-hidden z-1 w-[272px] h-[342px]">
           <Image
-            src="/assets/about-hero-img.webp"
+            src="/assets/about-hero-img.png"
             alt="Children smiling together"
             fill
             className="object-cover"
@@ -24,7 +24,7 @@ export default function HeroSection() {
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-foreground to-transparent" />
         </div>
 
-        <p className="z-2 max-w-xs md:max-w-lg mt-[-6%] uppercase text-center font-helixa font-black text-white">
+        <p className="z-2 max-w-xs md:max-w-lg mt-[-6%] !leading-[100%] !tracking-[-4%] uppercase text-center font-helixa font-black text-white">
           Building a legacy of empowerment, one community at a time.
         </p>
       </div>
