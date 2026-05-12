@@ -24,6 +24,7 @@ const cards = [
     title: "Suggest a Cause",
     description:
       "Know someone in need? Share a case and help us respond to urgent situations.",
+    type: "proposal",
   },
   {
     icon: (
@@ -48,6 +49,7 @@ const cards = [
     title: "Corporate Partnership",
     description:
       "Collaborate with us to expand reach and deliver greater impact across communities.",
+    type: "partnership",
   },
   {
     icon: (
@@ -72,6 +74,7 @@ const cards = [
     title: "Become a Supporter",
     description:
       "Help fund a child's education and provide urgent support where it's needed most.",
+    type: "sponsorship",
   },
   {
     icon: (
@@ -94,6 +97,7 @@ const cards = [
     title: "Volunteer",
     description:
       "Give your time and skills to support initiatives and make a meaningful difference.",
+    type: "volunteer",
   },
 ];
 
@@ -153,7 +157,7 @@ export default function JoinMovementSection() {
                 </div>
 
                 <Link
-                  href="/contact"
+                  href={`/contact?type=${card.type}`}
                   className="z-1 inline-flex items-center gap-[45px] w-fit py-[9px] ps-[25px] pe-[10px] rounded-full bg-white"
                 >
                   <span className="!leading-[150%] !tracking-[0.2%] !text-[15px] text-grey-800">
@@ -172,3 +176,5 @@ export default function JoinMovementSection() {
     </section>
   );
 }
+
+
