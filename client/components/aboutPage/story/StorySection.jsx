@@ -3,7 +3,7 @@ import WorkCard from "../../landingPage/work/WorkCard";
 import TextReveal from "../../ui/TextReveal";
 
 const cards = [
-// ... (omitted cards for brevity)
+  // ... (omitted cards for brevity)
   {
     icon: "lucide:target",
     title: "Mission",
@@ -44,14 +44,13 @@ export default function StorySection() {
           <TextReveal className="max-w-3xl text-center font-bold">
             The Royals was founded from a deep understanding of human need and
             the universal desire for a better life. At its heart is a commitment
-            to improving the standard of living for children whose parents 
-            or guardians are unable to provide adequately due to economic
-            hardship.
+            to improving the standard of living for children whose parents or
+            guardians are unable to provide adequately due to economic hardship.
           </TextReveal>
 
           <Image
-            src="/assets/happy-african-children.webp"
-            alt="happy african children"
+            src="/assets/about-story-img.jpg"
+            alt="our story"
             width={304}
             height={229.97}
             className="md:w-[574] lg:w-[694] md:h-[434] lg:h-[525] my-10 rounded-[10.51px] md:rounded-3xl"
@@ -70,9 +69,8 @@ export default function StorySection() {
 
             <TextReveal className="md:max-w-sm lg:max-w-xl font-bold">
               At the core of everything we do is a foundation rooted in purpose,
-              guiding our journey to create meaningful, 
-              lasting transformation across communities through every action
-              we take.
+              guiding our journey to create meaningful, lasting transformation
+              across communities through every action we take.
             </TextReveal>
           </div>
 
