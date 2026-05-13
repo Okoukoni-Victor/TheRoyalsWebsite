@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-
-=======
 // components/gallery/GalleryData.js
->>>>>>> fb6a59bae8e5114bcd577f5501d4aa4de9705e25
 
 export const galleryData = {
   "CABI": {
