@@ -27,20 +27,20 @@ export default function FolderGrid({ folders, activeMediaType, onFolderClick }) 
           className="group cursor-pointer flex flex-col overflow-hidden"
         >
           {/* Card Image */}
-          <div className="relative aspect-video w-full overflow-hidden bg-grey-100">
+          <div className="relative aspect-video w-full overflow-hidden">
             <Image
               src={folder.thumbnail}
               alt={folder.title}
-              width={400}
-              height={400}
-              className="object-cover w-full"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
             {activeMediaType === "Videos" && (
-              <div className="absolute inset-0 flex items-center justify-center bg-black/10">
-                <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center">
                   <Icon
                     icon="ph:play-fill"
-                    className="text-white"
+                    className="text-grey-800"
                     width="24"
                   />
                 </div>

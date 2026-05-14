@@ -97,7 +97,7 @@ export default function Founders() {
                 />
 
                 {/* Name Card */}
-                <div className="absolute bottom-5 left-5 right-5 flex justify-between p-5 rounded-[10px] bg-white">
+                <div className="md:max-w-2/3 absolute bottom-5 left-5 right-5 flex justify-between p-5 rounded-[10px] bg-white">
                   <div className="flex items-center gap-3">
                     <div className="relative overflow-hidden shrink-0 w-10 h-10 rounded-full">
                       <Image

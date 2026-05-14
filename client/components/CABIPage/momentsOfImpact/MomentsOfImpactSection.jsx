@@ -1,85 +1,75 @@
+"use client";
+
+import React from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import Button from "@/components/ui/Button";
+
+const images = [
+  {
+    src: "/assets/cabi-moment-1.jpg",
+    alt: "Third edition of the clothe a boy child initiative",
+    className: "col-span-2 md:col-span-1 h-[400px] md:h-[500px]"
+  },
+  {
+    src: "/assets/cabi-moment-2.jpg",
+    alt: "Second edition of the clothe a boy child initiative",
+    className: "col-span-2 md:col-span-1 h-[300px] md:h-[350px]"
+  },
+  {
+    src: "/assets/cabi-moment-3.jpg",
+    alt: "Fourth edition of the clothe a boy child initiative",
+    className: "col-span-2 max-w-3xl mx-auto w-full h-[400px] md:h-[600px]"
+  },
+  {
+    src: "/assets/cabi-moment-4.jpg",
+    alt: "First edition of the clothe a boy child initiative",
+    className: "col-span-2 md:col-span-1 h-[400px] md:h-[500px]"
+  },
+  {
+    src: "/assets/cabi-moment-5.jpg",
+    alt: "Third edition of the clothe a boy child initiative",
+    className: "col-span-2 md:col-span-1 h-[300px] md:h-[350px]"
+  }
+];
 
 export default function MomentsOfImpactSection() {
   return (
-    <section className="section !px-0 lg:px-[3rem] bg-white">
-      <div className="flex flex-col gap-[50px] max-w-7xl mx-auto">
-        <div className="flex flex-col items-center gap-[19px]">
-          <h2 className="!leading-[120%] !tracking-[-5%] text-center !text-[41px] md:!text-[51px] !font-black text-grey-900">
-            Moments of Impact
-          </h2>
-
-          <p className="max-w-[559px] px-[1rem] lg:px-[3rem] !leading-[150%] !tracking-[0.2%] text-center !text-[15px] text-grey-300">
-            Explore highlights from our initiatives, community outreach, and the
-            lives we are touching.
+    <section className="section bg-white">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
+        {/* Header */}
+        <div className="text-center mb-16 md:mb-24">
+          <h2 className="text-grey-900 mb-6">Moments of Impact</h2>
+          <p className="text-grey-400 max-w-xl mx-auto">
+            Explore highlights from our initiatives, community outreach, and the lives we are touching.
           </p>
         </div>
 
-        <div className="relative overflow-hidden flex flex-col items-center gap-8">
-          <div className="flex flex-col md:flex-row gap-8">
-            <div className="order-2 md:order-1 relative overflow-hidden w-[501px] md:w-[585.42px] lg:w-[694px] h-[388px] md:h-[442.86px] lg:h-[525px] rounded-[15px] md:rounded-[20.25px] lg:rounded-[24px]">
+        {/* Image Grid */}
+        <div className="grid grid-cols-2 gap-6 md:gap-12 mb-16 md:mb-24">
+          {images.map((img, i) => (
+            <div
+              key={i}
+              className={`relative rounded-2xl overflow-hidden ${img.className}`}
+            >
               <Image
-                src="/assets/cabi-moment-1.jpg"
-                alt="Third edition of the clothe a boy child initiative"
+                src={img.src}
+                alt={img.alt}
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
-
-            <div className="order-1 md:order-2 self-end md:self-start relative overflow-hidden w-[268px] md:w-[422.62px] lg:w-[501px] h-[203px] md:h-[327.3px] lg:h-[388px] rounded-[12.45px] md:rounded-[12.65px] lg:rounded-[15px]">
-              <Image
-                src="/assets/cabi-moment-2.jpg"
-                alt="Second edition of the clothe a boy child initiative"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
-
-          <div className="relative overflow-hidden w-[551px] md:w-[760.04px] lg:w-[901px] h-[415.85px] md:h-[573.61px] lg:h-[680px] rounded-[14.68px] md:rounded-[20.25px] lg:rounded-[24px]">
-            <Image
-              src="/assets/cabi-moment-3.jpg"
-              alt="Fourth edition of the clothe a boy child initiative"
-              fill
-              className="object-cover"
-            />
-          </div>
-
-          <div className="flex flex-col md:flex-row gap-8">
-            <div className="order-2 md:order-1 relative overflow-hidden w-[501px] md:w-[585.42px] lg:w-[694px] h-[388px] md:h-[442.86px] lg:h-[525px] rounded-[15px] md:rounded-[20.25px] lg:rounded-[24px]">
-              <Image
-                src="/assets/cabi-moment-4.jpg"
-                alt="First edition of the clothe a boy child initiative"
-                fill
-                className="object-cover"
-              />
-            </div>
-
-            <div className="order-1 md:order-2 self-end md:self-start relative overflow-hidden w-[268px] md:w-[422.62px] lg:w-[501px] h-[203px] md:h-[327.3px] lg:h-[388px] rounded-[12.45px] md:rounded-[12.65px] lg:rounded-[15px]">
-              <Image
-                src="/assets/cabi-moment-5.jpg"
-                alt="Third edition of the clothe a boy child initiative"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
+          ))}
         </div>
 
-        <Link
-          href="/gallery"
-          className="self-center inline-flex items-center gap-[45px] w-fit py-[9px] ps-[25px] pe-[10px] rounded-full bg-purple-700"
-        >
-          <span className="!leading-[150%] !tracking-[0.2%] !text-[15px] text-white">
-            Explore Gallery
-          </span>
-
-          <span className="p-[8.85px] rounded-full bg-purple-200">
-            <ArrowRight className="w-[19.3px] h-[19.3px] text-white" />
-          </span>
-        </Link>
+        {/* Bottom Button */}
+        <div className="flex justify-center">
+          <Button 
+            label="Explore Gallery" 
+            href="/gallery" 
+            variant="purple"
+          />
+        </div>
       </div>
     </section>
   );

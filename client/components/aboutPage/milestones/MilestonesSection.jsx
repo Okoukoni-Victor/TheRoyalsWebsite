@@ -42,7 +42,7 @@ export default function MilestonesSection() {
   const activeMilestone = milestones.find((m) => m.id === activeId);
 
   return (
-    <section className="section pt-0 bg-white">
+    <section className="section bg-white">
       <div className="flex flex-col gap-12 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row lg:justify-between gap-12">
           <div className="flex flex-col gap-4">
@@ -53,7 +53,7 @@ export default function MilestonesSection() {
             </p>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-12">
+          <div className="flex flex-col lg:max-w-1/2 md:flex-row gap-12">
             {/* Timeline */}
             <div className="flex flex-col">
               {milestones.map((milestone, index) => (
@@ -79,7 +79,7 @@ export default function MilestonesSection() {
                     onClick={() => setActiveId(milestone.id)}
                     aria-label={`Show milestones for ${milestone.year}`}
                     aria-pressed={milestone.id === activeId}
-                    className={`cursor-pointer px-4 py-1.5 rounded-[30px] text-sm font-medium text-white ${
+                    className={`cursor-pointer px-4 py-1.5 rounded-[30px] text-sm whitespace-nowrap text-white ${
                       milestone.id === activeId ? "bg-blue-300" : "bg-grey-200"
                     }`}
                   >
@@ -95,7 +95,7 @@ export default function MilestonesSection() {
 
               <ul
                 aria-labelledby={activeMilestone.id}
-                className="flex flex-col gap-4"
+                className="flex flex-col gap-6 md:gap-8"
               >
                 {activeMilestone.items.map((item, index) => (
                   <li key={index} className="flex items-start gap-[14px]">
@@ -107,7 +107,7 @@ export default function MilestonesSection() {
                       className="shrink-0 mt-2"
                     />
 
-                    <p className="max-w-sm lg:max-w-md text-grey-300">{item}</p>
+                    <p className="max-w-sm lg:max-w-2xl text-grey-300 leading-relaxed">{item}</p>
                   </li>
                 ))}
               </ul>

@@ -17,7 +17,7 @@ export default function NewsletterSection({ bgVariant = "blue" }) {
   const bgClasses = {
     blue: "bg-blue-300",
     purple: "bg-purple-700",
-    urgent: "bg-green-700", // Based on urgent 2k theme if applicable
+    urgent: "bg-green-600", // Based on urgent 2k theme if applicable
   };
 
   const buttonVariants = {

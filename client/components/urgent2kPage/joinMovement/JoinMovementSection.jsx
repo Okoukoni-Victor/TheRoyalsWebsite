@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Button from "@/components/ui/Button";
 import { ArrowRight } from "lucide-react";
 
 const cards = [
@@ -103,14 +104,14 @@ const cards = [
 
 export default function JoinMovementSection() {
   return (
-    <section className="section !pb-0 !px-0 lg:!px-3 bg-white">
-      <div className="flex flex-col gap-[66px] mx-auto pt-[82px] pb-[50px] px-[29px] md:px-[39px] lg:px-[85px] lg:rounded-[14px] bg-green-600">
+    <section className="mt-16 md:mt-24 bg-green-600 lg:rounded-2xl">
+      <div className="flex flex-col section gap-[66px] mx-auto  ">
         <div className="flex flex-col items-center gap-[19px]">
-          <h2 className="!leading-[120%] !tracking-[-5%] text-center !text-[41px] md:!text-[51px] !font-black text-white">
+          <h2 className="text-center text-white">
             Join the Movement
           </h2>
 
-          <p className="max-w-[573px] !leading-[150%] !tracking-[0.2%] text-center !text-[15px] text-grey-50">
+          <p className="max-w-[573px] text-center text-grey-50">
             Be part of a community that shows up when it matters most,
             responding quickly to urgent needs and turning compassion into
             meaningful action.
@@ -147,27 +148,20 @@ export default function JoinMovementSection() {
 
               <div className="flex flex-col gap-[28px]">
                 <div className="flex flex-col gap-4">
-                  <h3 className="!leading-[120%] !tracking-[-5%] !text-[24px] text-grey-700">
+                  <h4 className=" text-grey-700">
                     {card.title}
-                  </h3>
+                  </h4>
 
-                  <p className="!leading-[150%] !tracking-[0.2%] !text-[15px] text-grey-400">
+                  <p className=" text-grey-400">
                     {card.description}
                   </p>
                 </div>
 
-                <Link
+                <Button
                   href={`/contact?type=${card.type}`}
-                  className="z-1 inline-flex items-center gap-[45px] w-fit py-[9px] ps-[25px] pe-[10px] rounded-full bg-white"
-                >
-                  <span className="!leading-[150%] !tracking-[0.2%] !text-[15px] text-grey-800">
-                    Get Involved
-                  </span>
-
-                  <span className="p-[8.85px] rounded-full bg-green-600">
-                    <ArrowRight className="w-[19.3px] h-[19.3px] text-white" />
-                  </span>
-                </Link>
+                  label="Get Involved"
+                  variant="secondaryGreen"
+                />
               </div>
             </li>
           ))}

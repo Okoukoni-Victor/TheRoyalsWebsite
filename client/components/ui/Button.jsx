@@ -13,7 +13,7 @@ export default function Button({
   ...props
 }) {
   const baseStyles =
-    "inline-flex items-center justify-between gap-8 rounded-full transition-all duration-300 active:scale-[0.98] group";
+    "inline-flex items-center justify-between gap-8 rounded-full whitespace-nowrap transition-all duration-300 active:scale-[0.98] group";
 
   const variants = {
     primary: "bg-blue-300 hover:bg-blue-400 text-white",
@@ -44,7 +44,7 @@ export default function Button({
       {reversed ? (
         <>
           <div
-            className={`${iconCircleVariants[variant]} w-8 h-8 rounded-full flex items-center justify-center transition-transform`}
+            className={`${iconCircleVariants[variant]} w-8 h-8 rounded-full shrink-0 flex items-center justify-center transition-transform`}
           >
             <Icon icon={icon} width="18" className="text-white" />
           </div>
@@ -54,7 +54,7 @@ export default function Button({
         <>
           <span className="">{label}</span>
           <div
-            className={`${iconCircleVariants[variant]} w-8 h-8 rounded-full flex items-center justify-center transition-transform`}
+            className={`${iconCircleVariants[variant]} w-8 h-8 rounded-full shrink-0 flex items-center justify-center transition-transform`}
           >
             <Icon icon={icon} width="18" className="text-white" />
           </div>
