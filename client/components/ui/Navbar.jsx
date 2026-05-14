@@ -88,14 +88,14 @@ export default function Navbar() {
   return (
     <>
       <nav className={`fixed top-0 left-0 w-full z-150 transition-all duration-500 bg-white border-b border-grey-50 h-20`}>
-        <div className="max-w-[1440px] h-full mx-auto flex items-center justify-between px-6 lg:px-[95px]">
+        <div className="max-w-7xl h-full mx-auto flex items-center justify-between px-4 md:px-8">
           
-          <Link href="/" className="relative z-160 block w-32 md:w-40 h-10" onClick={() => setIsMobileMenuOpen(false)}>
+          <Link href="/" className="relative z-160 block w-32 md:w-40 lg:w-52 h-10 lg:h-12" onClick={() => setIsMobileMenuOpen(false)}>
             <Image 
               src="/assets/navLogo-blue.svg"
               alt="The Royals Logo"
               fill
-              sizes="(max-width: 768px) 128px, 160px"
+              sizes="(max-width: 768px) 128px, (max-width: 1024px) 160px, 208px"
               className="object-contain"
               priority
             />
@@ -264,7 +264,7 @@ export default function Navbar() {
         </div>
 
         {/* Footer Section */}
-        <div className='px-6 mt-auto pt-10 pb-12 space-y-8 mobile-nav-item'>
+        <div className='px-6 mt-auto border-t-2 border-t-grey-50/50 pt-10 pb-12 space-y-8 mobile-nav-item'>
           <Link 
             href="/privacy-policy" 
             className="block text-lg font-medium text-grey-800"

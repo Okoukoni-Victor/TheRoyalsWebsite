@@ -20,6 +20,7 @@ export default function Button({
     secondaryGreen: "bg-white hover:bg-grey-50 text-green-600 pl-8 pr-2 py-2 ",
     green: "bg-green-600 hover:bg-green-700 text-white pl-8 pr-2 py-2 ",
     purple: "bg-purple-700 hover:bg-purple-800 text-white pl-8 pr-2 py-2 ",
+    hero: "bg-blue-300 hover:bg-blue-400 text-white pl-8 pr-2 py-2 ",
   };
 
   const iconCircleVariants = {
@@ -28,6 +29,7 @@ export default function Button({
     secondaryGreen: "bg-green-600",
     green: "bg-green-300",
     purple: "bg-purple-200",
+    hero: "bg-grey-800",
   };
 
   const content = (

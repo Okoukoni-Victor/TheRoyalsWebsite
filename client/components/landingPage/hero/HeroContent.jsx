@@ -21,7 +21,7 @@ export default function HeroContent() {
       <Button 
         label="Our Story" 
         href="/about" 
-        variant="primary"
+        variant="hero"
       />
     </div>
   );
