@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -65,20 +65,29 @@ export default function Navbar() {
     }
   }, [isMobileMenuOpen]);
 
+  const tl = useRef(null);
+
   useGSAP(() => {
+    tl.current = gsap.timeline({ paused: true })
+      .to('.mobile-menu', { x: 0, opacity: 1, visibility: 'visible', duration: 0.5, ease: 'power3.out' })
+      .fromTo('.mobile-nav-item', 
+        { x: 20, opacity: 0 }, 
+        { x: 0, opacity: 1, stagger: 0.05, duration: 0.4, ease: 'power2.out' }, 
+        "-=0.3"
+      );
+  }, []);
+
+  useEffect(() => {
     if (isMobileMenuOpen) {
-      gsap.to('.mobile-menu', { x: 0, opacity: 1, visibility: 'visible', duration: 0.5, ease: 'power3.out' });
-      gsap.from('.mobile-nav-item', { x: 20, opacity: 0, stagger: 0.05, duration: 0.4, delay: 0.1, ease: 'power2.out' });
+      tl.current?.play();
     } else {
-      gsap.to('.mobile-menu', { x: '100%', opacity: 0, visibility: 'hidden', duration: 0.4, ease: 'power3.in' });
+      tl.current?.reverse();
     }
-  }, { dependencies: [isMobileMenuOpen] });
+  }, [isMobileMenuOpen]);
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 w-full z-150 transition-all duration-500 ${
-        isScrolled || isMobileMenuOpen ? 'bg-white/95 backdrop-blur-md h-20' : 'bg-white h-20'
-      }`}>
+      <nav className={`fixed top-0 left-0 w-full z-150 transition-all duration-500 bg-white border-b border-grey-50 h-20`}>
         <div className="max-w-[1440px] h-full mx-auto flex items-center justify-between px-6 lg:px-[95px]">
           
           <Link href="/" className="relative z-160 block w-32 md:w-40 h-10" onClick={() => setIsMobileMenuOpen(false)}>
@@ -99,10 +108,10 @@ export default function Navbar() {
                 {link.isDropdown ? (
                   <>
                     <button className={`flex items-center gap-1.5 py-8 focus:outline-none transition-colors ${
-                      isInitiativesActive ? 'text-blue-300 font-bold' : 'text-grey-900'
+                      isInitiativesActive ? 'text-blue-300' : 'text-grey-900'
                     }`}>
                       {link.label}
-                      <Icon icon="lucide:chevron-down" width="14" className="transition-transform duration-300 group-hover:rotate-180" />
+                      <Icon icon="tabler:chevron-down" width="14" className="transition-transform duration-300 group-hover:rotate-180" />
                     </button>
                     <div className="absolute top-22 left-1/2 -translate-x-1/2 w-[440px] opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-2 group-hover:translate-y-0 transition-all duration-300 z-50">
                       <div className="absolute top-0 left-0 w-full h-4" />
@@ -144,7 +153,7 @@ export default function Navbar() {
                                 <div className={`w-9 h-9 rounded-full bg-blue-300 flex items-center justify-center transition-all duration-300 ${
                                   pathname === sub.href ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-2'
                                 } group-hover/item:opacity-100 group-hover/item:translate-x-0`}>
-                                  <Icon icon="lucide:arrow-right" className="text-white" width="18" />
+                                  <Icon icon="tabler:arrow-right" className="text-white" width="18" />
                                 </div>
                               </Link>
                             )
@@ -157,7 +166,7 @@ export default function Navbar() {
                   <Link 
                     href={link.href}
                     className={`transition-colors py-8 block ${
-                      isActive(link.href) ? 'text-blue-300 font-bold' : 'text-grey-900 hover:text-blue-300'
+                      isActive(link.href) ? 'text-blue-300' : 'text-grey-900 hover:text-blue-300'
                     }`}
                   >
                     {link.label}
@@ -170,7 +179,7 @@ export default function Navbar() {
           <div className="hidden lg:block">
             <Button 
               label="Get Involved" 
-              href="/get-involved" 
+              href="/contact" 
               variant="primary"
             />
           </div>
@@ -180,7 +189,7 @@ export default function Navbar() {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            <Icon icon={isMobileMenuOpen ? "lucide:x" : "lucide:menu"} width="28" />
+            <Icon icon={isMobileMenuOpen ? "tabler:x" : "tabler:menu-2"} width="28" />
           </button>
         </div>
       </nav>
@@ -197,11 +206,11 @@ export default function Navbar() {
                   <button 
                     onClick={() => setActiveMobileSubmenu(activeMobileSubmenu === link.label ? null : link.label)}
                     className={`w-full flex items-center justify-between text-lg font-medium transition-colors ${
-                      isInitiativesActive ? 'text-blue-300 font-bold' : 'text-grey-800'
+                      isInitiativesActive ? 'text-blue-300' : 'text-grey-800'
                     }`}
                   >
                     {link.label}
-                    <Icon icon="lucide:chevron-down" width="20" className={`transition-transform ${activeMobileSubmenu === link.label ? 'rotate-180' : ''} ${isInitiativesActive ? 'text-blue-300' : 'text-grey-400'}`} />
+                    <Icon icon="tabler:chevron-down" width="20" className={`transition-transform ${activeMobileSubmenu === link.label ? 'rotate-180' : ''} ${isInitiativesActive ? 'text-blue-300' : 'text-grey-400'}`} />
                   </button>
                   
                   {activeMobileSubmenu === link.label && (
@@ -223,7 +232,7 @@ export default function Navbar() {
                                 <span className="text-sm text-grey-400 font-medium">{sub.subtitle}</span>
                               </div>
                               <div className="w-8 h-8 rounded-full bg-blue-300 flex items-center justify-center shrink-0">
-                                <Icon icon="lucide:arrow-right" className="text-white" width="16" />
+                                <Icon icon="tabler:arrow-right" className="text-white" width="16" />
                               </div>
                             </Link>
                           ) : (
@@ -243,7 +252,7 @@ export default function Navbar() {
                 <Link 
                   href={link.href}
                   className={`text-lg font-medium transition-colors ${
-                    isActive(link.href) ? 'text-blue-300 font-bold' : 'text-grey-800'
+                    isActive(link.href) ? 'text-blue-300' : 'text-grey-800'
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
@@ -266,7 +275,7 @@ export default function Navbar() {
 
           <Button 
             label="Get Involved" 
-            href="/get-involved" 
+            href="/contact" 
             variant="primary"
             className="w-full"
             onClick={() => setIsMobileMenuOpen(false)}

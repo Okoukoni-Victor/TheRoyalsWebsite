@@ -1,13 +1,12 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaLinkedin, FaWhatsapp, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt, FaYoutube } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { Icon } from "@iconify/react";
 export default function Footer() {
     const currentYear = new Date().getFullYear();
     
     return(
-        <footer className='pt-8 md:pt-16 pb-4 px-4 md:px-8 bg-black text-white'>
+        <footer className='pt-8 md:pt-16 pb-4 px-4 md:px-8 bg-grey-900 text-white'>
             <div className='flex justify-end mb-24 max-w-7xl mx-auto'>
                  <h1 className='text-6xl md:text-8xl font-medium flex items-baseline gap-2'>
                       Get Involved
@@ -28,7 +27,7 @@ export default function Footer() {
                     className='object-contain brightness-0 invert'
                     />
                   </div>
-                <p className='text-gray-400 text-sm leading-relaxed max-w-[280px]'>
+                <p className=' text-sm leading-relaxed max-w-[280px]'>
                     Empowering Communities through  education, mentoring,
                     and sustainable development initiatives
                 </p>
@@ -41,7 +40,7 @@ export default function Footer() {
                     <h5 className=' mb-6'>
                         Quick Links
                     </h5>
-                    <ul className='space-y-3 text-gray-400'>
+                    <ul className='space-y-3'>
                         <li><Link href='/' className='hover:text-blue-500 transition'>Home</Link></li>
                         <li><Link href='/about' className=' hover:text-blue-500 transition'>About Us</Link></li>
                         <li><Link href='/gallery' className=' hover:text-blue-500 transition'>Gallery</Link></li>
@@ -54,7 +53,7 @@ export default function Footer() {
                 {/* Initiatives */}
                 <div className='flex flex-col'>
                     <h5 className='mb-6'>Our initiatives</h5>
-                    <ul className='space-y-4 text-gray-400'>
+                    <ul className='space-y-4 '>
                         <li>Clothe A BoyChild Initiative (CABI)</li>
                         <li>Urgent 2K Campaign</li>
                     </ul>
@@ -63,35 +62,47 @@ export default function Footer() {
                 {/* Contact channels*/}
                 <div className='flex flex-col'>
                     <h5 className='mb-6'>
-                        Get Intouch.
+                        Get in Touch.
                     </h5>
                     <ul>
-                        <li className='flex items-center gap-4 mt-1 text-gray-400'><FaEnvelope className='text-white' /><span>hellothe royals@gmail.com</span></li>
-                        <li className='flex items-center gap-3 mt-1 text-gray-400'><FaPhone className='text-white' /><span className='text-sm'>+2347010990908</span></li>
-                        <li className='flex items-center gap-3 mt-1 text-gray-400'><FaWhatsapp className='text-white' /><span className='text-sm'>+2348166527163</span></li>
-                        <li className='flex items-center gap-3 mt-1 text-gray-400'><FaMapMarkerAlt className='text-white mb-5' /><span className='text-sm'>19, Olanrewaju Street, Off <br />
-                            Orile Road, Tabon-Tabon, <br /> Agege, Lagos, Nigeria</span></li>
+                        <li className='flex items-center gap-4 mt-1'>
+                            <Icon icon="solar:letter-bold" className='text-white' width="18" />
+                            <a href="mailto:hello.theroyals@gmail.com" className="hover:text-blue-500 transition">hello.theroyals@gmail.com</a>
+                        </li>
+                        <li className='flex items-center gap-3 mt-1'>
+                            <Icon icon="solar:phone-bold" className='text-white' width="18" />
+                            <a href="tel:+2347010990908" className='text-sm hover:text-blue-500 transition'>+234 701 099 0908</a>
+                        </li>
+                        <li className='flex items-center gap-3 mt-1'>
+                            <Icon icon="tabler:brand-whatsapp" className='text-white' width="18" />
+                            <a href="https://wa.me/2348166527163" target="_blank" rel="noopener noreferrer" className='text-sm hover:text-blue-500 transition'>+234 816 652 7163</a>
+                        </li>
+                        <li className='flex items-center gap-3 mt-1'>
+                            <Icon icon="solar:map-point-bold" className='text-white mb-5' width="18" />
+                            <span className='text-sm'>19, Olanrewaju Street, Off <br />
+                            Orile Road, Tabon-Tabon, <br /> Agege, Lagos, Nigeria</span>
+                        </li>
                     </ul>
                     {/* Horizontal Icons */}
                     <div className='flex flex-row justify-start mt-5 gap-3.5'>
                         <Link href="#" className="hover:text-blue-500 transition">
-                        <FaYoutube size={20} /> 
+                          <Icon icon="tabler:brand-youtube" width="22" /> 
                         </Link> 
                         <Link href="#" className="hover:text-blue-500 transition">
-                        <FaLinkedin size={20} /> 
+                          <Icon icon="tabler:brand-linkedin" width="22" /> 
                         </Link>
                         <Link href="#" className="hover:text-blue-500 transition">
-                        <FaXTwitter size={20} /> 
+                          <Icon icon="tabler:brand-x" width="22" /> 
                         </Link>
                         <Link href="#" className="hover:text-blue-500 transition">
-                        <FaInstagram size={20} /> 
+                          <Icon icon="tabler:brand-instagram" width="22" /> 
                         </Link>
                     </div>
                 </div>
                 
             </div>
                 {/* Copy rights */}
-                <p className='text-gray-500 text-sm text-center'>@ {currentYear} The Royals. All rights reserved</p>
+                <p className='text-sm text-center'>@ {currentYear} The Royals. All rights reserved</p>
                 <div className='w-full flex justify-start mt-10'>
                 {/* Colorful shapes at the footer bottom  */}
 

@@ -6,46 +6,50 @@ export default function ImpactCard({
   title, 
   description, 
   bgColor, 
-  patternSvg 
+  patternSvg,
+  href 
 }) {
   return (
-    <div className={`relative ${bgColor} rounded-2xl p-8 lg:p-12 flex flex-col min-h-[500px] overflow-hidden`}>
+    <div className={`relative w-full flex-1 ${bgColor} max-w-[500px] rounded-2xl p-8 flex flex-col min-h-[400px] overflow-hidden`}>
       {/* Hanging Tag SVG */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[320px] lg:max-w-[380px] h-12 pointer-events-none">
+      <div className="absolute top-0 w-2/3 left-1/2 -translate-x-1/2 pointer-events-none">
         <Image 
           src={tagSvg} 
-          width={500}
-          height={200}
+          width={700}
+          height={500}
           alt="Category" 
-          className="object-contain -translate-y-2"
+          className="object-contain "
         />
       </div>
 
       {/* Content */}
-      <div className="mt-56 relative text-gray-700 space-y-4 z-10 max-w-[90%] md:max-w-[80%]">
+      <div className="mt-40 relative text-grey-700 space-y-4 z-10 max-w-[90%] md:max-w-[80%] flex-1 flex flex-col">
         <h5 className=" ">
           {title}
         </h5>
-        <p className="mb-10 text-gray-600">
+        <p className="mb-6 text-grey-600 flex-1">
           {description}
         </p>
 
-        <Button 
-          label="Learn More" 
-          variant="secondary"
-          className="text-base"
-        />
+        <div className="mt-auto pt-4">
+          <Button 
+            label="Learn More" 
+            variant="secondary"
+            className="text-base"
+            href={href}
+          />
+        </div>
       </div>
 
       {/* Background Graphic Pattern */}
       {patternSvg && (
-        <div className="absolute bottom-0 right-0 w-[300px] h-[300px] pointer-events-none flex items-end justify-end overflow-hidden">
+        <div className="absolute bottom-0 right-0 w-30 h-30  md:w-40 md:h-40 pointer-events-none">
           <Image 
             src={patternSvg}
-            fill
-            sizes="300px"
+            width={200}
+            height={200}
             alt="" 
-            className="translate-x-10 translate-y-10 opacity-90 object-contain"
+            className=" w-full"
           />
         </div>
       )}

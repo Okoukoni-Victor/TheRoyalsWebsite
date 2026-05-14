@@ -7,14 +7,16 @@ export default function ImpactSection() {
       title: "Clothe A BoyChild Initiative (CABI)",
       description: "Providing school uniforms, materials, and support to underprivileged boys to ensure they have equal access to education without the barrier of inadequate resources.",
       bgColor: "bg-purple-100",
-      patternSvg: "/patterns/CABI-pattern.svg"
+      patternSvg: "/patterns/crown.svg",
+      href: "/initiatives/cabi"
     },
     {
       tagSvg: "/patterns/community-support.svg",
       title: "Urgent 2K Campaign",
       description: "A rapid response fundraising campaign to address immediate community needs, from medical emergencies to educational support, one contribution at a time.",
       bgColor: "bg-green-100",
-      patternSvg: "/patterns/2k-pattern.svg"
+      patternSvg: "/assets/rainbow.svg",
+      href: "/initiatives/urgent-2k"
     }
   ];
 
@@ -28,7 +30,7 @@ export default function ImpactSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        <div className="flex flex-col flex-wrap md:flex-row max-w-6xl justify-center items-stretch mx-auto gap-8 ">
           {impacts.map((impact, index) => (
             <ImpactCard key={index} {...impact} />
           ))}

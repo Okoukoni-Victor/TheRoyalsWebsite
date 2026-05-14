@@ -20,7 +20,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function TextReveal({ 
   children, 
   className, 
-  as: Component = "p",
+  as: Component = "h3",
   start = "top 85%",
   end = "bottom 70%"
 }) {

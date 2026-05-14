@@ -6,7 +6,7 @@ import HeroBackground from "../../ui/HeroBackground";
 
 export default function GalleryHero() {
   return (
-    <section className="section relative w-full bg-foreground overflow-hidden min-h-screen flex flex-col justify-between pt-24 md:pt-32 pb-16 md:pb-20">
+    <section className="section relative w-full  bg-grey-900 overflow-hidden min-h-screen flex flex-col justify-between pt-24 md:pt-32 pb-16 md:pb-20">
       {/* Reusable Background */}
       <HeroBackground />
 
@@ -31,7 +31,7 @@ export default function GalleryHero() {
 
       {/* Hero Footer */}
       <div className="relative z-10">
-        <p className="text-white/80 max-w-md">
+        <p className="text-white max-w-md">
           A glimpse into the lives we&apos;ve touched, the communities we serve, and the meaningful impact we continue to create through our initiatives.
         </p>
       </div>

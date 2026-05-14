@@ -26,28 +26,7 @@ const cards = [
     title: "Sponsor a Student",
     description:
       "Provide clothing and learning support to help a boy stay confident and in school.",
-  },
-  {
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        viewBox="0 0 20 20"
-        fill="none"
-        aria-hidden="true"
-        focusable="false"
-        className="relative"
-      >
-        <path
-          d="M10 18C12.1217 18 14.1566 17.1571 15.6569 15.6569C17.1571 14.1566 18 12.1217 18 10C18 7.87827 17.1571 5.84344 15.6569 4.34315C14.1566 2.84285 12.1217 2 10 2C7.87827 2 5.84344 2.84285 4.34315 4.34315C2.84285 5.84344 2 7.87827 2 10C2 12.1217 2.84285 14.1566 4.34315 15.6569C5.84344 17.1571 7.87827 18 10 18ZM10 0C11.3132 0 12.6136 0.258658 13.8268 0.761205C15.0401 1.26375 16.1425 2.00035 17.0711 2.92893C17.9997 3.85752 18.7362 4.95991 19.2388 6.17317C19.7413 7.38642 20 8.68678 20 10C20 12.6522 18.9464 15.1957 17.0711 17.0711C15.1957 18.9464 12.6522 20 10 20C4.47 20 0 15.5 0 10C0 7.34784 1.05357 4.8043 2.92893 2.92893C4.8043 1.05357 7.34784 0 10 0ZM10.5 5V10.25L15 12.92L14.25 14.15L9 11V5H10.5Z"
-          fill="#121212"
-        />
-      </svg>
-    ),
-    title: "Volunteer",
-    description:
-      "Offer your time and skills to support boys and strengthen community programs.",
+    type: "sponsorship",
   },
   {
     icon: (
@@ -70,6 +49,7 @@ const cards = [
     title: "Suggest",
     description:
       "Know a boy in need? Share a case and help us extend support where it matters.",
+    type: "proposal",
   },
   {
     icon: (
@@ -94,6 +74,30 @@ const cards = [
     title: "Partner With Us",
     description:
       "Work with us to expand support and empower more boys through shared impact.",
+    type: "partnership",
+  },
+  {
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="none"
+        aria-hidden="true"
+        focusable="false"
+        className="relative"
+      >
+        <path
+          d="M10 18C12.1217 18 14.1566 17.1571 15.6569 15.6569C17.1571 14.1566 18 12.1217 18 10C18 7.87827 17.1571 5.84344 15.6569 4.34315C14.1566 2.84285 12.1217 2 10 2C7.87827 2 5.84344 2.84285 4.34315 4.34315C2.84285 5.84344 2 7.87827 2 10C2 12.1217 2.84285 14.1566 4.34315 15.6569C5.84344 17.1571 7.87827 18 10 18ZM10 0C11.3132 0 12.6136 0.258658 13.8268 0.761205C15.0401 1.26375 16.1425 2.00035 17.0711 2.92893C17.9997 3.85752 18.7362 4.95991 19.2388 6.17317C19.7413 7.38642 20 8.68678 20 10C20 12.6522 18.9464 15.1957 17.0711 17.0711C15.1957 18.9464 12.6522 20 10 20C4.47 20 0 15.5 0 10C0 7.34784 1.05357 4.8043 2.92893 2.92893C4.8043 1.05357 7.34784 0 10 0ZM10.5 5V10.25L15 12.92L14.25 14.15L9 11V5H10.5Z"
+          fill="#121212"
+        />
+      </svg>
+    ),
+    title: "Volunteer",
+    description:
+      "Offer your time and skills to support boys and strengthen community programs.",
+    type: "volunteer",
   },
 ];
 
@@ -147,16 +151,16 @@ export default function JoinMovementSection() {
                     {card.title}
                   </h3>
 
-                  <p className="!leading-[150%] !tracking-[0.2%] !text-[15px] text-grey-400">
+                  <p className="leading-[150%] tracking-[0.2%] !text-[15px] text-grey-400">
                     {card.description}
                   </p>
                 </div>
 
                 <Link
-                  href="/contact"
+                  href={`/contact?type=${card.type}`}
                   className="z-1 inline-flex items-center gap-[45px] w-fit py-[9px] ps-[25px] pe-[10px] rounded-full bg-white"
                 >
-                  <span className="!leading-[150%] !tracking-[0.2%] !text-[15px] text-grey-800">
+                  <span className="leading-[150%] tracking-[0.2%] text-[15px] text-grey-800">
                     Get Involved
                   </span>
 

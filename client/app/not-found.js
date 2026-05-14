@@ -23,8 +23,8 @@ export default function NotFound() {
                              <span className='h-8 w-8 rounded-full bg-blue-900 flex items-center justify-center'>
                                
                                  <Icon 
-                                 icon="lucide:arrow-left" 
-                                 className="text-white" width="30"
+                                 icon="tabler:arrow-left" 
+                                 className="text-white" width="18"
                                  />
                               </span> 
                               <span className='text-white font-medium'>

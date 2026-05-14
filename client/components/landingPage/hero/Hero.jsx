@@ -5,7 +5,7 @@ import HeroBackground from "../../ui/HeroBackground";
 
 export default function Hero() {
   return (
-    <section className="relative section w-full min-h-screen bg-foreground overflow-hidden flex flex-col justify-between">
+    <section className="relative py-8 md:py-16 w-full min-h-screen bg-grey-900 overflow-hidden flex flex-col justify-between">
       {/* Reusable Background */}
       <HeroBackground />
       {/* Content */}

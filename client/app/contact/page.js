@@ -1,16 +1,19 @@
-import React from 'react'
+import IntroSection from "@/components/contactPage/intro/IntroSection";
+import ContactSection from "@/components/contactPage/contact/ContactSection";
+import NewsletterSection from "@/components/ui/NewsletterSection";
 
 export const metadata = {
   title: "Contact",
-  description: "Get in touch with The Royals. Reach out to us for partnerships, volunteering opportunities, or to learn more about our work in African communities.",
+  description:
+    "Get in touch with The Royals. Reach out to us for partnerships, volunteering opportunities, or to learn more about our work in African communities.",
 };
 
-const Contact = () => {
+export default function ContactPage() {
   return (
     <main>
-        <h1>Contact</h1>
+      <IntroSection />
+      <ContactSection />
+      <NewsletterSection bgVariant="blue" />
     </main>
-  )
+  );
 }
-
-export default Contact
