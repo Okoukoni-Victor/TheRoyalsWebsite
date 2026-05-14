@@ -41,7 +41,7 @@ export default function StorySection() {
         <div className="flex flex-col items-center">
           <h3 className="mb-5 text-center text-blue-300">{"// Our Story"}</h3>
 
-          <TextReveal className="max-w-3xl text-center font-bold">
+          <TextReveal className="max-w-4xl text-center font-bold">
             The Royals was founded from a deep understanding of human need and
             the universal desire for a better life. At its heart is a commitment
             to improving the standard of living for children whose parents or

@@ -11,10 +11,10 @@ export default function CoreValueCard({
 }) {
   return (
     <div
-      className={`relative ${bgColor} rounded-2xl p-8 lg:p-10 flex flex-col min-h-[350px] overflow-hidden group`}
+      className={`relative ${bgColor} rounded-2xl p-4 flex flex-col justify-center min-h-[300px] overflow-hidden group`}
     >
-      {/* Icon Badge - Octagon Shape */}
-      <div className="relative z-10 w-12 h-12 mb-16 flex items-center justify-center">
+      {/* Icon Badge - Octagon Shape - Top Right */}
+      <div className="absolute top-8 right-8 z-10 w-12 h-12 flex items-center justify-center">
         <Image
           src="/assets/octagon.svg"
           alt=""
@@ -25,20 +25,20 @@ export default function CoreValueCard({
         {icon && <Icon icon={icon} className="relative z-1 w-6 h-6 text-grey-900" />}
       </div>
 
-      {/* Content */}
-      <div className={`relative z-10 mt-auto ${textColor}`}>
+      {/* Content - Centered */}
+      <div className={`relative z-10 ${textColor} max-w-[260px]`}>
         <h4 className="mb-4">{title}</h4>
-        <p className="">{description}</p>
+        <p className="text-grey-400">{description}</p>
       </div>
 
-      {/* Background Pattern */}
+      {/* Background Pattern - Bottom Right */}
       {patternSvg && (
-        <div className="absolute top-0 right-0 pointer-events-none">
+        <div className="absolute bottom-0 right-0 pointer-events-none translate-x-4 translate-y-4">
           <Image
             src={patternSvg}
             alt={title}
-            width={200}
-            height={200}
+            width={180}
+            height={180}
             className="w-full h-auto"
           />
         </div>

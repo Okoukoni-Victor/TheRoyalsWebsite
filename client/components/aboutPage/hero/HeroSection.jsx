@@ -24,9 +24,9 @@ export default function HeroSection() {
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-foreground to-transparent" />
         </div>
 
-        <p className="z-2 max-w-xs md:max-w-lg mt-[-6%] !leading-[100%] !tracking-[-4%] uppercase text-center font-helixa font-black text-white">
+        <h3 className="z-2 max-w-xs md:max-w-3xl mt-[-6%] uppercase text-center font-black text-white">
           Building a legacy of empowerment, one community at a time.
-        </p>
+        </h3>
       </div>
     </section>
   );

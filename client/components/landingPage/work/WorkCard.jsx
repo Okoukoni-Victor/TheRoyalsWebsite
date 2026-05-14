@@ -12,7 +12,7 @@ export default function WorkCard({
 }) {
   return (
     <div
-      className={`relative ${bgColor} rounded-2xl p-8 lg:p-10 flex flex-col min-h-[350px] overflow-hidden group`}
+      className={`relative ${bgColor} rounded-2xl p-4 lg:p-4 flex flex-col min-h-[350px] overflow-hidden group`}
     >
       {/* Icon Badge - Octagon Shape */}
       <div className="relative z-10 w-12 h-12 mb-16 flex items-center justify-center">

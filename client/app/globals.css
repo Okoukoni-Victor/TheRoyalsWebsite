@@ -84,7 +84,7 @@ body {
 
 /* Section Standard Padding */
 .section {
-  @apply py-8 px-4 md:py-16 md:px-8;
+  @apply py-8 px-4 md:py-16 md:px-16;
 }
 
 /* Typography Scale */

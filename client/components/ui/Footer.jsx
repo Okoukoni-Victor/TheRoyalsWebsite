@@ -57,7 +57,7 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
     
     return(
-        <footer className='pt-8 md:pt-16 pb-4 px-4 md:px-8 bg-grey-900 text-white'>
+        <footer className='section bg-grey-900 text-white'>
             <div className='flex justify-end mb-32 max-w-7xl mx-auto'>
                  <h1 className='text-6xl md:text-8xl font-medium flex items-baseline gap-2'>
                       Get Involved
@@ -157,7 +157,7 @@ export default function Footer() {
             
             <div className='w-full flex justify-start mt-10'>
                 {/* Colorful shapes at the footer bottom  */}
-                <div className='flex justify-left p-8 w-full'>
+                <div className='flex justify-left w-full'>
                     <div className='relative w-[450px] h-[60px] max-w-full'>
                         <Image
                             src="/assets/footer-image.png"

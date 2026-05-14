@@ -2,7 +2,7 @@ import CoreValueCard from "./CoreValueCard";
 
 const cards = [
   {
-    icon: "solar:heart-bold",
+    icon: "solar:heart-outline",
     title: "Compassion",
     description:
       "We lead with empathy and genuine care for the communities we serve.",
@@ -10,14 +10,14 @@ const cards = [
     patternSvg: "/patterns/compassion-pattern.svg",
   },
   {
-    icon: "solar:shield-check-bold",
+    icon: "iconamoon:shield-light",
     title: "Integrity",
     description: "Transparency and accountability guide every action we take.",
     bgColor: "bg-gold-300",
     patternSvg: "/patterns/integrity-pattern.svg",
   },
   {
-    icon: "solar:lightbulb-bold",
+    icon: "ant-design:bulb-outlined",
     title: "Innovation",
     description:
       "We embrace creative solutions to address community challenges.",
@@ -25,7 +25,7 @@ const cards = [
     patternSvg: "/patterns/innovation-pattern.svg",
   },
   {
-    icon: "solar:graph-up-bold",
+    icon: "uil:chart-down",
     title: "Excellence",
     description:
       "We strive for the highest standards in all our programs and initiatives.",
@@ -34,7 +34,7 @@ const cards = [
     patternSvg: "/patterns/excellence-pattern.svg",
   },
   {
-    icon: "solar:users-group-rounded-bold",
+    icon: "fluent:people-32-regular",
     title: "Collaboration",
     description:
       "We believe in the power of partnerships to amplify our impact.",
@@ -42,7 +42,7 @@ const cards = [
     patternSvg: "/patterns/collaboration-pattern.svg",
   },
   {
-    icon: "solar:global-bold",
+    icon: "hugeicons:internet",
     title: "Sustainability",
     description:
       "We focus on creating lasting change that benefits future generations.",
