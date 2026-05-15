@@ -8,10 +8,13 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-      hostname:"drive.google.com",
-    },
-  
-    {
+        hostname: "res.cloudinary.com",
+      },
+      {
+        protocol: "https",
+        hostname: "drive.google.com",
+      },
+      {
         protocol: "https",      
         hostname: "images.unsplash.com",
       },

@@ -6,27 +6,27 @@ import Button from "../../ui/Button";
 
 const images = [
   {
-    src: "/assets/cabi-moment-1.jpg",
+    src: "https://res.cloudinary.com/diluabuwv/image/upload/v1778416940/Moment_of_Impact_Section_gtxowc.jpg",
     alt: "CABI Outreach Moment",
     className: "col-span-2 md:col-span-1 h-[400px] md:h-[500px]"
   },
   {
-    src: "/assets/cabi-moment-2.jpg",
+    src: "https://res.cloudinary.com/diluabuwv/image/upload/v1778416914/Moment_of_Impact_Section_1_vbofpl.jpg",
     alt: "Supporting children",
     className: "col-span-2 md:col-span-1 h-[300px] md:h-[350px]"
   },
   {
-    src: "/assets/u2k-moment-1.jpg",
+    src: "https://res.cloudinary.com/diluabuwv/image/upload/v1778416933/Moment_of_Impact_Section_dnqyyy.jpg",
     alt: "Urgent 2K Distribution",
     className: "col-span-2 max-w-3xl mx-auto w-full h-[400px] md:h-[600px]"
   },
   {
-    src: "/assets/cabi-moment-3.jpg",
+    src: "https://res.cloudinary.com/diluabuwv/image/upload/v1778415846/Moment_of_Impact_Section_and_CABI_Moment_of_Impact_section_fvwvui.jpg",
     alt: "Community Impact",
     className: "col-span-2 md:col-span-1 h-[400px] md:h-[500px]"
   },
   {
-    src: "/assets/u2k-moment-2.jpg",
+    src: "https://res.cloudinary.com/diluabuwv/image/upload/v1778415844/Moment_of_Impact_Section_and_CABI_Moment_of_Impact_section_and_Gallery_Preview_and_Gallery_Hero_Section_avekpn.jpg",
     alt: "Health and Support",
     className: "col-span-2 md:col-span-1 h-[300px] md:h-[350px]"
   }

@@ -5,7 +5,7 @@ const founders = [
     id: "solomonemakwu",
     name: "Solomon Emakwu",
     role: "Founder",
-    image: ["/assets/solomon-emakwu-sm.jpg", "/assets/solomon-emakwu-md.jpg"],
+    image: ["https://res.cloudinary.com/diluabuwv/image/upload/v1778415259/Founder_Solomon_Emakwu_i8bzmi.jpg", "/assets/solomon-emakwu-md.jpg"],
     avatar: "/assets/solomon-emakwu-avatar.webp",
     bio: (
       <p className="max-w-xl text-grey-300">

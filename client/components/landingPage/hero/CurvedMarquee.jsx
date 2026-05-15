@@ -6,11 +6,11 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 const SOURCE_IMAGES = [
-  "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=600",
-  "https://images.unsplash.com/photo-1542884748-2b87b36c6b90?q=80&w=600",
-  "https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=600",
-  "https://images.unsplash.com/photo-1509099836639-18ba1795216d?q=80&w=600",
-  "https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?q=80&w=600",
+  "https://res.cloudinary.com/diluabuwv/image/upload/v1778416952/Urgent_2k_Impact_and_Gallery_Hero_section_and_Privacy_Policy_ug0cbl.jpg",
+  "https://res.cloudinary.com/diluabuwv/image/upload/v1778416883/Hero_Section_and_Gallery_preview_r1d6oo.jpg",
+  "https://res.cloudinary.com/diluabuwv/image/upload/v1778416878/Hero_section_hsxe7f.jpg",
+  "https://res.cloudinary.com/diluabuwv/image/upload/v1778415842/Hero_Section_and_CABI_Moment_of_Impact_section_and_Gallery_Preview_tz52tr.jpg",
+  "https://res.cloudinary.com/diluabuwv/image/upload/v1778415838/Hero_Section_and_CABI_Hero_section_and_CABI_Moment_of_Impact_section_and_Gallery_Preview_hmkrtn.jpg",
 ];
 
 // Duplicate for seamless loop
